@@ -61,9 +61,49 @@
 
     .footer{background:#2A1506;padding:28px 40px;text-align:center;}
     .footer p{font-size:0.74rem;color:rgba(255,255,255,0.2);}
+
+    .pet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .pet-card{background:var(--white);border:1px solid var(--border);border-radius:16px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;}
+    .pet-card-featured{border-color:var(--amber);border-width:2px;}
+    .pet-card-top{padding:28px 28px 0;}
+    .pet-card-bottom{padding:20px 28px 24px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);margin-top:20px;}
+    .pet-tag{display:inline-block;background:rgba(122,158,110,0.12);color:var(--sage);border:1px solid rgba(122,158,110,0.3);font-size:0.68rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:50px;margin-bottom:12px;}
+    .pet-tag-offer{background:rgba(201,132,26,0.12);color:var(--amber);border-color:rgba(201,132,26,0.3);}
+    .pet-card h3{font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem;color:var(--brown-deep);margin-bottom:10px;line-height:1.25;}
+    .pet-card p{font-size:0.875rem;color:var(--text-mid);line-height:1.75;}
+    .pet-offer-box{background:var(--cream-dark);border-radius:10px;padding:14px 16px;margin-top:16px;border:1px solid var(--border);}
+    .pet-offer-label{font-size:0.65rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:6px;}
+    .pet-offer-box p{font-size:0.82rem;color:var(--text-mid);}
+    .pet-source{font-size:0.72rem;color:var(--text-muted);}
+    .pet-btn{background:var(--brown-deep);color:var(--white);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;padding:10px 20px;border-radius:50px;text-decoration:none;transition:opacity 0.2s;white-space:nowrap;}
+    .pet-btn:hover{opacity:0.85;}
+    .pet-btn-offer{background:var(--sage);}
+    @media(max-width:900px){.pet-grid{grid-template-columns:1fr;}}
     @media(max-width:900px){.product-card{grid-template-columns:1fr;}.free-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
     @media(max-width:540px){.section{padding:56px 20px;}.page-hero{padding:56px 20px;}.nav{padding:0 20px;}}
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EXQ12CDJS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8EXQ12CDJS');
+  </script>
+  <script>
+    (function (s, e, n, d, er) {
+      s['Sender'] = er;
+      s[er] = s[er] || function () {
+        (s[er].q = s[er].q || []).push(arguments)
+      }, s[er].l = 1 * new Date();
+      var a = e.createElement(n),
+          m = e.getElementsByTagName(n)[0];
+      a.async = 1;
+      a.src = d;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+    sender('89edea74209101')
+  </script>
 </head>
 <body>
   <nav class="nav">
@@ -124,20 +164,104 @@
           <span class="free-pill">Free Download</span>
           <h3>Maverick Activity Pack</h3>
           <p>Free printable Maverick activity pack — perfect for keeping little ones entertained. Sign up and get them instantly.</p>
-          <a href="https://stats.sender.net/forms/aJRJwN/view" target="_blank" class="btn-sage">Get Free Activity Pack</a>
+          <div style="text-align:left" class="sender-form-field" data-sender-form-id="bW69jg"></div>
         </div>
         <div class="free-card">
           <span class="free-icon">🔔</span>
           <span class="free-pill">Early Access</span>
           <h3>Book 2 — First to Know</h3>
           <p>Be first to hear when Book 2 launches. Sign up for updates and never miss a new Maverick adventure.</p>
-          <a href="https://stats.sender.net/forms/aJRJwN/view" target="_blank" class="btn-sage">Get Notified</a>
+          <div style="text-align:left" class="sender-form-field" data-sender-form-id="bW69jg"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="disclosure">
+  
+  <!-- PET ESSENTIALS -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-eyebrow">Maverick Approved</div>
+      <div class="section-title">Pet Essentials We Actually Use</div>
+      <div class="paw-divider"><span>🐾</span></div>
+      <p style="font-size:0.92rem;color:var(--text-mid);line-height:1.75;margin-bottom:32px;">Everything below is something we genuinely use with Maverick. No filler recommendations — just the products that have made a real difference.</p>
+      <div class="pet-grid">
+
+        <div class="pet-card">
+          <div class="pet-card-top">
+            <span class="pet-tag">Essentials</span>
+            <h3>Earth Rated Dog Poo Bags</h3>
+            <p>The ones we actually use every day. Thick, lavender-scented and reliably leak-proof. If you own a dog you are buying poo bags regardless — these are genuinely the best we have tried.</p>
+          </div>
+          <div class="pet-card-bottom">
+            <span class="pet-source">Amazon UK</span>
+            <a href="https://amzn.to/3M7aw9V" target="_blank" rel="nofollow" class="pet-btn">Buy on Amazon</a>
+          </div>
+        </div>
+
+        <div class="pet-card">
+          <div class="pet-card-top">
+            <span class="pet-tag">Dental Health</span>
+            <h3>Plaque Off Dental Powder</h3>
+            <p>A daily dental supplement sprinkled over food. We noticed a difference in Maverick's breath and plaque build-up within a few weeks. Vet recommended and genuinely easy to use — no tooth brushing required.</p>
+          </div>
+          <div class="pet-card-bottom">
+            <span class="pet-source">Amazon UK</span>
+            <a href="https://amzn.to/4rM28f4" target="_blank" rel="nofollow" class="pet-btn">Buy on Amazon</a>
+          </div>
+        </div>
+
+        <div class="pet-card pet-card-featured">
+          <div class="pet-card-top">
+            <span class="pet-tag pet-tag-offer">50% Off First Box</span>
+            <h3>Pure Pet Food</h3>
+            <p>Freshly prepared dog food delivered to your door. Real ingredients, no fillers, gently air-dried. We switched Maverick to Pure and the difference in his coat and energy was noticeable within two weeks. The wife was a convert before the first bag was empty.</p>
+            <div class="pet-offer-box">
+              <span class="pet-offer-label">Current Offer</span>
+              <p>50% off your first box + 20% off subsequent deliveries. Use our link to claim.</p>
+            </div>
+          </div>
+          <div class="pet-card-bottom">
+            <span class="pet-source">purepetfood.com</span>
+            <a href="https://purepetfood.com/s/RICK73288/w" target="_blank" rel="nofollow" class="pet-btn pet-btn-offer">Get 50% Off</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BRAND AFFILIATE / AMBASSADOR SIGNUP -->
+  <section class="section" style="background:var(--brown-deep);">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-eyebrow" style="color:var(--amber-light);">Work With Us</div>
+      <div class="section-title" style="color:var(--white);margin-bottom:16px;">Partner with <em style="font-style:italic;color:var(--amber-light);">Maverick</em></div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:32px;">
+        <div style="flex:1;height:1px;background:rgba(255,255,255,0.1);"></div>
+        <span style="font-size:0.9rem;filter:sepia(1) saturate(5) hue-rotate(2deg) brightness(0.85);">🐾</span>
+        <div style="flex:1;height:1px;background:rgba(255,255,255,0.1);"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:36px;">
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;">
+          <div style="font-size:1.8rem;margin-bottom:10px;">🐾</div>
+          <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:8px;">Brand Ambassador</h3>
+          <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.65;">Maverick has over 2,000 engaged Instagram followers — dog owners and parents of young children. Perfect for pet brands, children's products and family-focused businesses.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;">
+          <div style="font-size:1.8rem;margin-bottom:10px;">📦</div>
+          <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:8px;">Affiliate Partnership</h3>
+          <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.65;">We feature products we genuinely use and believe in. If your product is a great fit for our audience, we would love to hear from you.</p>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:32px;">
+        <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);margin-bottom:20px;text-align:center;">Register your interest below and we will be in touch.</p>
+        <div style="text-align:left" class="sender-form-field" data-sender-form-id="dJ69zD"></div>
+      </div>
+    </div>
+  </section>
+
+<div class="disclosure">
     <p>This page contains affiliate links. We may earn a small commission if you purchase through our Amazon links at no extra cost to you. This helps support the Maverick's Adventures series.</p>
   </div>
 
