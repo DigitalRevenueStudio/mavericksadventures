@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet Maverick — The Star of the Series</title>
+  <meta name="description" content="Meet Maverick the cockapoo — the real dog behind the children's book series. His adventures inspired every story." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brown-deep:#3D1F0A;--brown-mid:#6B3A1F;--cream:#FDF6EC;--cream-dark:#F5EAD8;--amber:#C9841A;--amber-light:#F0A830;--sage:#7A9E6E;--white:#FFFFFF;--text:#3D1F0A;--text-mid:#6B4C35;--text-muted:#A08070;--border:#E8D5BC;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);line-height:1.7;}
+    .nav{background:var(--brown-deep);padding:0 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:3px solid var(--amber);}
+    .nav-brand{font-family:'Playfair Display',serif;font-weight:800;font-size:1.2rem;color:var(--amber-light);text-decoration:none;padding:16px 0;}
+    .nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
+    .nav-links a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:0.82rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--amber-light);}
+    .nav-cta{background:var(--amber)!important;color:var(--white)!important;padding:8px 20px;border-radius:50px;font-size:0.78rem!important;}
+    .page-hero{background:var(--brown-deep);padding:80px 40px;text-align:center;border-bottom:3px solid var(--amber);}
+    .page-hero-inner{max-width:680px;margin:0 auto;}
+    .page-eyebrow{font-size:0.7rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:12px;}
+    .page-hero h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2.2rem,4vw,3.4rem);color:var(--white);line-height:1.1;margin-bottom:14px;}
+    .page-hero h1 em{font-style:italic;color:var(--amber-light);}
+    .page-hero p{font-size:1rem;color:rgba(255,255,255,0.5);line-height:1.75;}
+    .section{padding:80px 40px;}
+    .section-inner{max-width:1100px;margin:0 auto;}
+    .meet-grid{display:grid;grid-template-columns:1fr 460px;gap:72px;align-items:start;}
+    .meet-text .section-eyebrow{font-size:0.7rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
+    .meet-text h2{font-family:'Playfair Display',serif;font-weight:800;font-size:2.2rem;color:var(--brown-deep);line-height:1.15;margin-bottom:16px;}
+    .meet-text h2 em{font-style:italic;color:var(--amber);}
+    .meet-text p{font-size:0.97rem;color:var(--text-mid);line-height:1.85;margin-bottom:16px;}
+    .facts-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px;}
+    .fact-card{background:var(--cream-dark);border:1px solid var(--border);border-radius:12px;padding:18px 20px;}
+    .fact-label{font-size:0.68rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;}
+    .fact-val{font-size:0.95rem;font-weight:700;color:var(--brown-deep);}
+    .photo-stack{position:relative;}
+    .photo-main{width:100%;border-radius:16px;overflow:hidden;box-shadow:0 24px 64px rgba(61,31,10,0.2);}
+    .photo-main img{width:100%;display:block;}
+    .photo-caption{margin-top:12px;text-align:center;font-size:0.78rem;color:var(--text-muted);font-style:italic;}
+    .personality-section{background:var(--brown-deep);padding:80px 40px;}
+    .personality-inner{max-width:1100px;margin:0 auto;}
+    .traits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px;}
+    .trait-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:28px 20px;text-align:center;}
+    .trait-icon{font-size:2.2rem;margin-bottom:12px;display:block;}
+    .trait-card h3{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:8px;}
+    .trait-card p{font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.65;}
+    .cta-section{background:var(--cream-dark);padding:80px 40px;text-align:center;}
+    .cta-inner{max-width:640px;margin:0 auto;}
+    .cta-inner h2{font-family:'Playfair Display',serif;font-weight:800;font-size:2rem;color:var(--brown-deep);margin-bottom:14px;}
+    .cta-inner h2 em{font-style:italic;color:var(--amber);}
+    .cta-inner p{font-size:0.97rem;color:var(--text-muted);line-height:1.75;margin-bottom:28px;}
+    .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+    .btn-amber{background:var(--amber);color:var(--white);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.05em;text-transform:uppercase;padding:13px 28px;border-radius:50px;text-decoration:none;transition:all 0.2s;display:inline-block;}
+    .btn-amber:hover{background:var(--amber-light);color:var(--brown-deep);}
+    .btn-outline-brown{background:transparent;color:var(--brown-deep);border:2px solid var(--border);font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.05em;text-transform:uppercase;padding:11px 24px;border-radius:50px;text-decoration:none;transition:all 0.2s;display:inline-block;}
+    .btn-outline-brown:hover{border-color:var(--amber);color:var(--amber);}
+    .footer{background:#2A1506;padding:28px 40px;text-align:center;}
+    .footer p{font-size:0.74rem;color:rgba(255,255,255,0.2);}
+    .paw-divider{display:flex;align-items:center;gap:12px;margin-bottom:32px;}
+    .paw-divider::before,.paw-divider::after{content:'';flex:1;height:1px;background:var(--border);}
+    @media(max-width:900px){.meet-grid{grid-template-columns:1fr;}.traits-grid{grid-template-columns:1fr 1fr;}.nav-links{display:none;}}
+    @media(max-width:540px){.section{padding:56px 20px;}.page-hero{padding:56px 20px;}.traits-grid{grid-template-columns:1fr;}.nav{padding:0 20px;}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="https://www.mavericksadventures.co.uk" class="nav-brand">Maverick's Adventures</a>
+    <ul class="nav-links">
+      <li><a href="https://www.mavericksadventures.co.uk">Home</a></li>
+      <li><a href="https://www.mavericksadventures.co.uk/ma-meet-maverick.html" class="active">Meet The Star</a></li>
+      <li><a href="https://www.mavericksadventures.co.uk/ma-books.html">The Books</a></li>
+      <li><a href="https://www.mavericksadventures.co.uk/ma-shop.html">Shop & Deals</a></li>
+      <li><a href="https://www.mavericksadventures.co.uk/ma-blog.html">Blog</a></li>
+      <li><a href="https://amzn.to/4628qPf" target="_blank" rel="nofollow" class="nav-cta">Buy the Book</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-eyebrow">🐾 The Star of the Series</div>
+      <h1>Meet <em>Maverick</em></h1>
+      <p>The real cockapoo behind every adventure. Every story in the series is inspired by the real-life exploits of one very loveable, very curious dog.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="meet-grid">
+        <div class="meet-text">
+          <div class="section-eyebrow">The Real Dog Behind the Books</div>
+          <h2>This is <em>Maverick</em></h2>
+          <div class="paw-divider"><span>🐾</span></div>
+          <p>Maverick is a cockapoo with a huge personality, an insatiable curiosity and an absolute gift for finding trouble in the most endearing ways possible. He is the real dog behind every story in the Maverick's Adventures series.</p>
+          <p>Every book starts with something Maverick actually did — a hiding spot, an adventure, a new discovery — and builds a story around it. That is what makes the books feel so warm and lived-in. The adventures are real.</p>
+          <p>He loves exploring, meeting new friends and is remarkably patient with being the subject of a children's book series. He has taken it all in his stride.</p>
+          <div class="facts-grid">
+            <div class="fact-card"><div class="fact-label">Breed</div><div class="fact-val">Cockapoo</div></div>
+            <div class="fact-card"><div class="fact-label">Personality</div><div class="fact-val">Adventurous & loving</div></div>
+            <div class="fact-card"><div class="fact-label">Favourite thing</div><div class="fact-val">Exploring new places</div></div>
+            <div class="fact-card"><div class="fact-label">Instagram</div><div class="fact-val">Over 2,000 followers</div></div>
+          </div>
+        </div>
+        <div class="photo-stack">
+          <div class="photo-main">
+            <img src="maverick-photo.jpg" alt="Maverick the cockapoo" />
+          </div>
+          <p class="photo-caption">Maverick — the real adventure dog 🐾</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="personality-section">
+    <div class="personality-inner">
+      <div class="section-eyebrow" style="color:var(--amber-light);font-size:0.7rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:10px;">Why Children Love Him</div>
+      <div style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(1.8rem,3vw,2.4rem);color:var(--white);line-height:1.15;margin-bottom:40px;">What makes Maverick special</div>
+      <div class="traits-grid">
+        <div class="trait-card"><span class="trait-icon">🔍</span><h3>Curious</h3><p>Always exploring, always finding something new to investigate. Children recognise this instantly.</p></div>
+        <div class="trait-card"><span class="trait-icon">💛</span><h3>Loveable</h3><p>Warm, genuine and completely impossible not to root for. A character that stays with you.</p></div>
+        <div class="trait-card"><span class="trait-icon">🎉</span><h3>Playful</h3><p>Every page is an adventure. Hide and seek, exploring, discovering — always something to find.</p></div>
+        <div class="trait-card"><span class="trait-icon">📖</span><h3>Real</h3><p>Not a made-up character — a real dog with real adventures. Children sense that authenticity.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-inner">
+      <h2>Follow <em>Maverick's</em> adventures</h2>
+      <p>Follow us on Instagram for daily Maverick content, behind-the-scenes of the books and early access to Book 2 news. And if you have not got Book 1 yet — it is waiting for you on Amazon.</p>
+      <div class="cta-btns">
+        <a href="https://amzn.to/4628qPf" target="_blank" rel="nofollow" class="btn-amber">📦 Get the Book</a>
+        <a href="https://www.instagram.com/MaverickAdventure5/" target="_blank" class="btn-outline-brown">Follow on Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Maverick's Adventures. All rights reserved.</p>
+  </footer>
+</body>
+</html>

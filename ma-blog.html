@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Maverick's Adventures</title>
+  <meta name="description" content="Stories, updates and behind-the-scenes from Maverick's Adventures. Follow the journey of a real cockapoo and his book series." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brown-deep:#3D1F0A;--cream:#FDF6EC;--cream-dark:#F5EAD8;--amber:#C9841A;--amber-light:#F0A830;--sage:#7A9E6E;--white:#FFFFFF;--text:#3D1F0A;--text-mid:#6B4C35;--text-muted:#A08070;--border:#E8D5BC;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);line-height:1.7;}
+    .nav{background:var(--brown-deep);padding:0 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:3px solid var(--amber);}
+    .nav-brand{font-family:'Playfair Display',serif;font-weight:800;font-size:1.2rem;color:var(--amber-light);text-decoration:none;padding:16px 0;}
+    .nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
+    .nav-links a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:0.82rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--amber-light);}
+    .nav-cta{background:var(--amber)!important;color:var(--white)!important;padding:8px 20px;border-radius:50px;font-size:0.78rem!important;}
+    .page-hero{background:var(--brown-deep);padding:72px 40px;text-align:center;border-bottom:3px solid var(--amber);}
+    .page-hero-inner{max-width:640px;margin:0 auto;}
+    .page-eyebrow{font-size:0.7rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:12px;}
+    .page-hero h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:var(--white);line-height:1.1;margin-bottom:14px;}
+    .page-hero h1 em{font-style:italic;color:var(--amber-light);}
+    .page-hero p{font-size:1rem;color:rgba(255,255,255,0.5);line-height:1.75;}
+    .section{padding:80px 40px;}
+    .section-inner{max-width:1000px;margin:0 auto;}
+    .blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;}
+    .blog-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s;}
+    .blog-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(61,31,10,0.1);}
+    .blog-card-img{height:200px;background:linear-gradient(135deg,#A0623A 0%,#3D1F0A 100%);display:flex;align-items:center;justify-content:center;font-size:3rem;}
+    .blog-card-body{padding:28px;}
+    .blog-tag{display:inline-block;background:rgba(201,132,26,0.1);color:var(--amber);border:1px solid rgba(201,132,26,0.2);font-size:0.68rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:50px;margin-bottom:12px;}
+    .blog-card-body h3{font-family:'Playfair Display',serif;font-weight:800;font-size:1.15rem;color:var(--brown-deep);line-height:1.3;margin-bottom:10px;}
+    .blog-card-body p{font-size:0.875rem;color:var(--text-muted);line-height:1.7;margin-bottom:16px;}
+    .blog-meta{font-size:0.72rem;color:var(--text-muted);margin-bottom:16px;}
+    .read-link{font-size:0.82rem;font-weight:700;color:var(--amber);text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
+    .read-link:hover{color:var(--brown-deep);}
+    .blogger-cta{background:var(--cream-dark);border:1px solid var(--border);border-radius:16px;padding:40px;text-align:center;margin-top:40px;}
+    .blogger-cta h3{font-family:'Playfair Display',serif;font-weight:800;font-size:1.4rem;color:var(--brown-deep);margin-bottom:10px;}
+    .blogger-cta p{font-size:0.92rem;color:var(--text-muted);margin-bottom:20px;}
+    .btn-amber{display:inline-block;background:var(--amber);color:var(--white);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.05em;text-transform:uppercase;padding:13px 28px;border-radius:50px;text-decoration:none;transition:all 0.2s;}
+    .btn-amber:hover{background:var(--amber-light);color:var(--brown-deep);}
+    .newsletter-section{background:var(--brown-deep);padding:80px 40px;}
+    .newsletter-box{max-width:640px;margin:0 auto;text-align:center;}
+    .newsletter-box h2{font-family:'Playfair Display',serif;font-weight:800;font-size:2rem;color:var(--white);margin-bottom:14px;}
+    .newsletter-box h2 em{font-style:italic;color:var(--amber-light);}
+    .newsletter-box p{font-size:0.97rem;color:rgba(255,255,255,0.45);line-height:1.75;margin-bottom:28px;}
+    .newsletter-box a{display:inline-block;background:var(--amber);color:var(--white);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.88rem;letter-spacing:0.06em;text-transform:uppercase;padding:15px 36px;border-radius:50px;text-decoration:none;transition:all 0.2s;}
+    .newsletter-box a:hover{background:var(--amber-light);color:var(--brown-deep);}
+    .footer{background:#2A1506;padding:28px 40px;text-align:center;}
+    .footer p{font-size:0.74rem;color:rgba(255,255,255,0.2);}
+    @media(max-width:720px){.blog-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
+    @media(max-width:540px){.section{padding:56px 20px;}.page-hero{padding:56px 20px;}.nav{padding:0 20px;}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="https://www.mavericksadventures.co.uk" class="nav-brand">Maverick's Adventures</a>
+    <ul class="nav-links">
+      <li><a href="https://www.mavericksadventures.co.uk">Home</a></li>
+      <li><a href="https://www.mavericksadventures.co.uk/ma-meet-maverick.html">Meet The Star</a></li>
+      <li><a href="https://www.mavericksadventures.co.uk/ma-books.html">The Books</a></li>
+      <li><a href="https://www.mavericksadventures.co.uk/ma-shop.html">Shop & Deals</a></li>
+      <li><a href="https://www.mavericksadventures.co.uk/ma-blog.html" class="active">Blog</a></li>
+      <li><a href="https://amzn.to/4628qPf" target="_blank" rel="nofollow" class="nav-cta">Buy the Book</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-eyebrow">🐾 Stories & Updates</div>
+      <h1>The <em>Maverick</em> Blog</h1>
+      <p>Behind the scenes of the book series, Maverick's real adventures and updates on what is coming next.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="blog-card-img">📖</div>
+          <div class="blog-card-body">
+            <span class="blog-tag">The Story</span>
+            <p class="blog-meta">March 2026</p>
+            <h3>The story behind Where is Maverick?</h3>
+            <p>How a real cockapoo's hide-and-seek habit became a children's book — and what happened when we published it on Amazon.</p>
+            <a href="https://mavericksadventures.blogspot.com" target="_blank" class="read-link">Read More →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-card-img">🐾</div>
+          <div class="blog-card-body">
+            <span class="blog-tag">Behind the Scenes</span>
+            <p class="blog-meta">February 2026</p>
+            <h3>How we built a children's book series from scratch</h3>
+            <p>From idea to Amazon listing — the full process of creating Where is Maverick? with zero publishing experience.</p>
+            <a href="https://mavericksadventures.blogspot.com" target="_blank" class="read-link">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blogger-cta">
+        <h3>Read all posts on our blog</h3>
+        <p>More stories, updates and behind-the-scenes content on the full Maverick's Adventures blog.</p>
+        <a href="https://mavericksadventures.blogspot.com" target="_blank" class="btn-amber">Visit the Blog 🐾</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section">
+    <div class="newsletter-box">
+      <h2>Never miss a <em>new adventure</em></h2>
+      <p>Sign up for updates and get free Maverick activity pack instantly. Plus you will be first to know when Book 2 arrives.</p>
+      <a href="https://stats.sender.net/forms/aJRJwN/view" target="_blank">Get Free Activity Pack 🐾</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Maverick's Adventures. All rights reserved.</p>
+  </footer>
+</body>
+</html>
