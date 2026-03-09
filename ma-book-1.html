@@ -7,12 +7,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EXQ12CDJS"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS5VR0KGVT"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-8EXQ12CDJS');
+    gtag('config', 'G-SS5VR0KGVT');
   </script>
   <style>
     :root{--brown-deep:#3D1F0A;--brown-mid:#6B3A1F;--cream:#FDF6EC;--cream-dark:#F5EAD8;--amber:#C9841A;--amber-light:#F0A830;--sage:#7A9E6E;--white:#FFFFFF;--text:#3D1F0A;--text-mid:#6B4C35;--text-muted:#A08070;--border:#E8D5BC;}
@@ -125,9 +125,21 @@
       .reviews-grid{grid-template-columns:1fr;}
       .maverick-inner{grid-template-columns:1fr;}
       .newsletter-box{grid-template-columns:1fr;padding:40px 32px;}
-      .nav-links{display:none;}
+      
       .book-hero{padding:56px 24px;}
       .section{padding:60px 24px;}
+    }
+  
+    .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--amber-light);font-size:1.6rem;padding:4px 8px;line-height:1;}
+    @media(max-width:900px){
+      .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--brown-deep);border-top:2px solid var(--amber);padding:16px 0;z-index:200;}
+      .nav-links.open{display:flex;}
+      .nav-links li{width:100%;}
+      .nav-links a{display:block;padding:12px 24px;font-size:0.9rem;border-bottom:1px solid rgba(255,255,255,0.05);}
+      .nav-links a:last-child{border-bottom:none;}
+      .nav-cta{margin:10px 24px;text-align:center;border-radius:50px!important;border-bottom:none!important;}
+      .nav-mobile-toggle{display:block;}
+      .nav{position:relative;}
     }
   </style>
   <script>
@@ -170,8 +182,8 @@
         <p class="hero-desc">A fun rhyming hide-and-seek story following Maverick the cockapoo through a colourful adventure. Perfect for bedtime, storytime, and every read-aloud in between.</p>
         <div class="book-meta-row">
           <div class="meta-item"><span class="meta-label">Format</span><span class="meta-val">Paperback & Kindle</span></div>
-          <div class="meta-item"><span class="meta-label">Paperback</span><span class="meta-val">£8.99</span></div>
-          <div class="meta-item"><span class="meta-label">Kindle</span><span class="meta-val">£3.99</span></div>
+          
+          
           <div class="meta-item"><span class="meta-label">Ages</span><span class="meta-val">2–6 Years</span></div>
         </div>
         <div class="hero-actions">
@@ -320,5 +332,19 @@
     </div>
   </footer>
 
+  <script>
+    var toggle = document.querySelector('.nav-mobile-toggle');
+    var navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', function(){
+      navLinks.classList.toggle('open');
+      toggle.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        navLinks.classList.remove('open');
+        toggle.textContent = '☰';
+      });
+    });
+  </script>
 </body>
 </html>

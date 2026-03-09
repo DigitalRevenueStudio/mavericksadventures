@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shop & Deals — Maverick's Adventures</title>
-  <meta name="description" content="Shop Maverick's Adventures books and find the best deals. Available on Amazon with Prime delivery." />
+  <meta name="description" content="Explore Maverick's Adventures books, free resources, and pet care recommendations. Plus find out how to partner with us." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS5VR0KGVT"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SS5VR0KGVT');</script>
   <style>
-    :root{--brown-deep:#3D1F0A;--brown-mid:#6B3A1F;--cream:#FDF6EC;--cream-dark:#F5EAD8;--amber:#C9841A;--amber-light:#F0A830;--sage:#7A9E6E;--white:#FFFFFF;--text:#3D1F0A;--text-mid:#6B4C35;--text-muted:#A08070;--border:#E8D5BC;}
+    :root{--brown-deep:#3D1F0A;--cream:#FDF6EC;--cream-dark:#F5EAD8;--amber:#C9841A;--amber-light:#F0A830;--sage:#7A9E6E;--white:#FFFFFF;--text:#3D1F0A;--text-mid:#6B4C35;--text-muted:#A08070;--border:#E8D5BC;}
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);line-height:1.7;}
     .nav{background:var(--brown-deep);padding:0 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:3px solid var(--amber);}
@@ -15,146 +19,153 @@
     .nav-links a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:0.82rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;transition:color 0.2s;}
     .nav-links a:hover,.nav-links a.active{color:var(--amber-light);}
     .nav-cta{background:var(--amber)!important;color:var(--white)!important;padding:8px 20px;border-radius:50px;font-size:0.78rem!important;}
+    .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--amber-light);font-size:1.6rem;padding:4px 8px;line-height:1;}
+
+    /* HERO */
     .page-hero{background:var(--brown-deep);padding:72px 40px;text-align:center;border-bottom:3px solid var(--amber);}
-    .page-hero-inner{max-width:640px;margin:0 auto;}
+    .page-hero-inner{max-width:680px;margin:0 auto;}
     .page-eyebrow{font-size:0.7rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:12px;}
     .page-hero h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:var(--white);line-height:1.1;margin-bottom:14px;}
     .page-hero h1 em{font-style:italic;color:var(--amber-light);}
     .page-hero p{font-size:1rem;color:rgba(255,255,255,0.5);line-height:1.75;}
+
+    /* SECTIONS */
     .section{padding:80px 40px;}
-    .section-inner{max-width:1000px;margin:0 auto;}
+    .section-inner{max-width:1100px;margin:0 auto;}
     .section-eyebrow{font-size:0.7rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
-    .section-title{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(1.6rem,2.5vw,2.2rem);color:var(--brown-deep);margin-bottom:32px;}
+    .section-title{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--brown-deep);line-height:1.15;margin-bottom:16px;}
     .paw-divider{display:flex;align-items:center;gap:12px;margin-bottom:40px;}
     .paw-divider::before,.paw-divider::after{content:'';flex:1;height:1px;background:var(--border);}
 
-    .product-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:36px;display:grid;grid-template-columns:200px 1fr;gap:36px;align-items:center;margin-bottom:20px;transition:box-shadow 0.2s;}
-    .product-card:hover{box-shadow:0 12px 40px rgba(61,31,10,0.1);}
-    .product-cover{background:linear-gradient(135deg,#6B3A1F 0%,#3D1F0A 100%);border-radius:8px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;font-size:2rem;}
-    .product-cover img{width:100%;border-radius:8px;box-shadow:0 8px 24px rgba(61,31,10,0.2);}
-    .product-info h3{font-family:'Playfair Display',serif;font-weight:800;font-size:1.4rem;color:var(--brown-deep);margin-bottom:4px;}
-    .product-info h3 em{font-style:italic;color:var(--amber);}
-    .product-info .by-line{font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;}
-    .product-info p{font-size:0.92rem;color:var(--text-mid);line-height:1.75;margin-bottom:20px;}
-    .price-row{display:flex;gap:20px;margin-bottom:20px;flex-wrap:wrap;}
-    .price-item{display:flex;flex-direction:column;gap:2px;}
-    .price-label{font-size:0.65rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);}
-    .price-val{font-size:1.1rem;font-weight:800;color:var(--brown-deep);}
-    .stars{color:var(--amber-light);font-size:0.95rem;letter-spacing:2px;margin-bottom:12px;}
-    .buy-btn{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:var(--white);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.05em;text-transform:uppercase;padding:13px 28px;border-radius:50px;text-decoration:none;transition:all 0.2s;box-shadow:0 4px 16px rgba(201,132,26,0.3);}
-    .buy-btn:hover{background:var(--amber-light);color:var(--brown-deep);transform:translateY(-2px);}
-    .prime-note{font-size:0.74rem;color:var(--text-muted);margin-top:8px;}
+    /* DESTINATION CARDS */
+    .dest-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:0;}
+    .dest-card{background:var(--white);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s;}
+    .dest-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(61,31,10,0.1);}
+    .dest-card-top{padding:36px 36px 28px;}
+    .dest-icon{font-size:2.4rem;margin-bottom:16px;display:block;}
+    .dest-pill{display:inline-block;font-size:0.65rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:5px 12px;border-radius:50px;margin-bottom:14px;}
+    .pill-amber{background:rgba(201,132,26,0.12);color:var(--amber);}
+    .pill-sage{background:rgba(122,158,110,0.15);color:var(--sage);}
+    .dest-card h3{font-family:'Playfair Display',serif;font-weight:800;font-size:1.3rem;color:var(--brown-deep);margin-bottom:10px;line-height:1.2;}
+    .dest-card p{font-size:0.88rem;color:var(--text-muted);line-height:1.75;margin-bottom:0;}
+    .dest-card-bottom{padding:20px 36px 32px;}
+    .btn-dest{display:inline-flex;align-items:center;gap:8px;background:var(--brown-deep);color:var(--white);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase;padding:12px 24px;border-radius:50px;text-decoration:none;transition:all 0.2s;}
+    .btn-dest:hover{background:var(--amber);transform:translateX(3px);}
+    .btn-dest-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--brown-deep);border:2px solid var(--border);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase;padding:10px 22px;border-radius:50px;text-decoration:none;transition:all 0.2s;}
+    .btn-dest-outline:hover{border-color:var(--amber);color:var(--amber);}
 
-    .free-section{background:var(--cream-dark);}
-    .free-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
-    .free-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:28px;transition:transform 0.2s;}
-    .free-card:hover{transform:translateY(-3px);}
-    .free-icon{font-size:2.2rem;margin-bottom:14px;display:block;}
+    /* FREE RESOURCES */
+    .free-section{background:var(--cream-dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+    .free-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:0;}
+    .free-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:28px;}
+    .free-icon{font-size:1.8rem;display:block;margin-bottom:10px;}
+    .free-pill{display:inline-block;background:rgba(122,158,110,0.15);color:var(--sage);border:1px solid rgba(122,158,110,0.25);font-size:0.65rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;border-radius:50px;margin-bottom:12px;}
     .free-card h3{font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;color:var(--brown-deep);margin-bottom:8px;}
-    .free-card p{font-size:0.875rem;color:var(--text-muted);line-height:1.7;margin-bottom:16px;}
-    .free-pill{display:inline-block;background:rgba(122,158,110,0.15);color:var(--sage);border:1px solid rgba(122,158,110,0.3);font-size:0.68rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:50px;margin-bottom:12px;}
+    .free-card p{font-size:0.875rem;color:var(--text-muted);line-height:1.7;}
     .free-form-wrap{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:32px 40px;margin-top:24px;display:flex;flex-direction:column;align-items:center;}
     .free-form-label{font-size:0.88rem;color:var(--text-mid);font-weight:600;margin-bottom:20px;text-align:center;}
-    .btn-sage{display:inline-block;background:var(--sage);color:var(--white);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;padding:10px 22px;border-radius:50px;text-decoration:none;transition:opacity 0.2s;}
-    .btn-sage:hover{opacity:0.88;}
 
-    .disclosure{background:var(--cream-dark);border-top:1px solid var(--border);padding:24px 40px;text-align:center;}
-    .disclosure p{font-size:0.74rem;color:var(--text-muted);max-width:700px;margin:0 auto;}
+    /* BRAND AMBASSADOR */
+    .ambassador-section{background:var(--brown-deep);}
+    .ambassador-inner{max-width:1100px;margin:0 auto;}
+    .ambassador-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+    .ambassador-text .section-eyebrow{color:var(--sage);}
+    .ambassador-text .section-title{color:var(--white);}
+    .ambassador-text .section-title em{font-style:italic;color:var(--amber-light);}
+    .ambassador-text p{font-size:0.95rem;color:rgba(255,255,255,0.55);line-height:1.85;margin-bottom:14px;}
+    .ambassador-perks{display:flex;flex-direction:column;gap:12px;margin:24px 0;}
+    .perk{display:flex;align-items:center;gap:12px;font-size:0.88rem;color:rgba(255,255,255,0.7);}
+    .perk-icon{font-size:1.1rem;flex-shrink:0;}
+    .ambassador-form-wrap{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:32px;}
+    .ambassador-form-title{font-family:'Playfair Display',serif;font-weight:800;font-size:1.2rem;color:var(--white);margin-bottom:6px;}
+    .ambassador-form-sub{font-size:0.82rem;color:rgba(255,255,255,0.4);margin-bottom:20px;line-height:1.6;}
 
-    .footer{background:#2A1506;padding:28px 40px;text-align:center;}
+    /* FOOTER */
+    .footer{background:#2A1506;padding:28px 40px;text-align:center;border-top:1px solid rgba(255,255,255,0.05);}
     .footer p{font-size:0.74rem;color:rgba(255,255,255,0.2);}
+    .footer a{color:rgba(255,255,255,0.3);text-decoration:none;}
 
-    .pet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-    .pet-card{background:var(--white);border:1px solid var(--border);border-radius:16px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;}
-    .pet-card-featured{border-color:var(--amber);border-width:2px;}
-    .pet-card-top{padding:28px 28px 0;}
-    .pet-card-bottom{padding:20px 28px 24px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);margin-top:20px;}
-    .pet-tag{display:inline-block;background:rgba(122,158,110,0.12);color:var(--sage);border:1px solid rgba(122,158,110,0.3);font-size:0.68rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:50px;margin-bottom:12px;}
-    .pet-tag-offer{background:rgba(201,132,26,0.12);color:var(--amber);border-color:rgba(201,132,26,0.3);}
-    .pet-card h3{font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem;color:var(--brown-deep);margin-bottom:10px;line-height:1.25;}
-    .pet-card p{font-size:0.875rem;color:var(--text-mid);line-height:1.75;}
-    .pet-offer-box{background:var(--cream-dark);border-radius:10px;padding:14px 16px;margin-top:16px;border:1px solid var(--border);}
-    .pet-offer-label{font-size:0.65rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:6px;}
-    .pet-offer-box p{font-size:0.82rem;color:var(--text-mid);}
-    .pet-source{font-size:0.72rem;color:var(--text-muted);}
-    .pet-btn{background:var(--brown-deep);color:var(--white);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;padding:10px 20px;border-radius:50px;text-decoration:none;transition:opacity 0.2s;white-space:nowrap;}
-    .pet-btn:hover{opacity:0.85;}
-    .pet-btn-offer{background:var(--sage);}
-    @media(max-width:900px){.pet-grid{grid-template-columns:1fr;}}
-    @media(max-width:900px){.product-card{grid-template-columns:1fr;}.free-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
-    @media(max-width:540px){.section{padding:56px 20px;}.page-hero{padding:56px 20px;}.nav{padding:0 20px;}}
+    @media(max-width:900px){
+      .dest-grid,.free-grid,.ambassador-grid{grid-template-columns:1fr;}
+      .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--brown-deep);border-top:2px solid var(--amber);padding:16px 0;z-index:200;}
+      .nav-links.open{display:flex;}
+      .nav-links li{width:100%;}
+      .nav-links a{display:block;padding:12px 24px;font-size:0.9rem;border-bottom:1px solid rgba(255,255,255,0.05);}
+      .nav-cta{margin:10px 24px;text-align:center;border-radius:50px!important;border-bottom:none!important;}
+      .nav-mobile-toggle{display:block;}
+      .nav{position:relative;}
+      .section{padding:60px 24px;}
+      .page-hero{padding:56px 24px;}
+      .ambassador-section{padding:60px 24px;}
+    }
   </style>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EXQ12CDJS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8EXQ12CDJS');
-  </script>
   <script>
     (function (s, e, n, d, er) {
-      s['Sender'] = er;
-      s[er] = s[er] || function () {
-        (s[er].q = s[er].q || []).push(arguments)
-      }, s[er].l = 1 * new Date();
-      var a = e.createElement(n),
-          m = e.getElementsByTagName(n)[0];
-      a.async = 1;
-      a.src = d;
-      m.parentNode.insertBefore(a, m)
+      s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+      var a = e.createElement(n), m = e.getElementsByTagName(n)[0];
+      a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
     sender('89edea74209101')
   </script>
 </head>
 <body>
+
   <nav class="nav">
-    <a href="https://www.mavericksadventures.co.uk" class="nav-brand">Maverick's Adventures</a>
+    <a href="index.html" class="nav-brand">Maverick's Adventures</a>
+    <button class="nav-mobile-toggle" aria-label="Menu">☰</button>
     <ul class="nav-links">
-      <li><a href="https://www.mavericksadventures.co.uk">Home</a></li>
-      <li><a href="https://www.mavericksadventures.co.uk/ma-meet-maverick.html">Meet The Star</a></li>
-      <li><a href="https://www.mavericksadventures.co.uk/ma-books.html">The Books</a></li>
-      <li><a href="https://www.mavericksadventures.co.uk/ma-shop.html" class="active">Shop & Deals</a></li>
-      <li><a href="https://www.mavericksadventures.co.uk/ma-blog.html">Blog</a></li>
-      <li><a href="https://amzn.to/4628qPf" target="_blank" rel="nofollow" class="nav-cta">Buy the Book</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ma-meet-maverick.html">Meet The Star</a></li>
+      <li><a href="ma-books.html">The Books</a></li>
+      <li><a href="ma-shop.html" class="active">Shop & Deals</a></li>
+      <li><a href="ma-blog.html">Blog</a></li>
+      <li><a href="https://amzn.to/4628qPf" target="_blank" class="nav-cta">Buy the Book</a></li>
     </ul>
   </nav>
 
-  <header class="page-hero">
+  <!-- HERO -->
+  <section class="page-hero">
     <div class="page-hero-inner">
-      <div class="page-eyebrow">🐾 Books & Freebies</div>
-      <h1>Shop & <em>Deals</em></h1>
-      <p>Get the book, download free activity pack and grab everything Maverick. All in one place.</p>
+      <div class="page-eyebrow">Shop & Deals</div>
+      <h1>Everything <em>Maverick</em></h1>
+      <p>Books, free resources, pet care picks, and partnership opportunities — all in one place.</p>
     </div>
-  </header>
+  </section>
 
+  <!-- DESTINATION CARDS -->
   <section class="section">
     <div class="section-inner">
-      <div class="section-eyebrow">Available Now</div>
-      <div class="section-title">The Books</div>
+      <div class="section-eyebrow">Explore</div>
+      <div class="section-title">Where would you like to go?</div>
       <div class="paw-divider"><span><svg width="24" height="24" viewBox="0 0 100 100" fill="#C9841A" xmlns="http://www.w3.org/2000/svg"><path d="M50 45 C32 45 20 56 20 68 C20 80 32 88 50 88 C68 88 80 80 80 68 C80 56 68 45 50 45Z"/><ellipse cx="26" cy="35" rx="10" ry="13" transform="rotate(-15 26 35)"/><ellipse cx="74" cy="35" rx="10" ry="13" transform="rotate(15 74 35)"/><ellipse cx="40" cy="22" rx="9" ry="12" transform="rotate(-5 40 22)"/><ellipse cx="60" cy="22" rx="9" ry="12" transform="rotate(5 60 22)"/></svg></span></div>
-
-      <div class="product-card">
-        <div class="product-cover">
-          <img src="book-cover.png" alt="Where is Maverick book cover" onerror="this.parentElement.innerHTML='📚'" />
-        </div>
-        <div class="product-info">
-          <h3><em>Where is Maverick?</em></h3>
-          <p class="by-line">By Rick Shirley — Book 1 of the Maverick's Adventures Series</p>
-          <div class="stars">★★★★★</div>
-          <p>A fun rhyming hide-and-seek story following Maverick the cockapoo on a colourful adventure. Perfect for bedtime reading, early literacy and any child who loves dogs.</p>
-          <div class="price-row">
-            <div class="price-item"><span class="price-label">Paperback</span><span class="price-val">£8.99</span></div>
-            <div class="price-item"><span class="price-label">Kindle</span><span class="price-val">£3.99</span></div>
-            <div class="price-item"><span class="price-label">Ages</span><span class="price-val">2–6 Years</span></div>
+      <div class="dest-grid">
+        <div class="dest-card">
+          <div class="dest-card-top">
+            <span class="dest-icon">📚</span>
+            <span class="dest-pill pill-amber">Available Now</span>
+            <h3>The Books</h3>
+            <p>Explore the full Maverick's Adventures book series. Rhyming picture books for children aged 2–6, available in paperback and Kindle on Amazon.</p>
           </div>
-          <a href="https://amzn.to/4628qPf" target="_blank" rel="nofollow" class="buy-btn">📦 Buy on Amazon</a>
-          <p class="prime-note">🚚 Prime eligible — fast UK delivery</p>
+          <div class="dest-card-bottom">
+            <a href="ma-books.html" class="btn-dest">Browse the Books →</a>
+          </div>
+        </div>
+        <div class="dest-card">
+          <div class="dest-card-top">
+            <span class="dest-icon">🐾</span>
+            <span class="dest-pill pill-sage">Recommended</span>
+            <h3>Pet Care Picks</h3>
+            <p>The products we use and trust for Maverick every day. From food to accessories — honest recommendations from a real dog owner.</p>
+          </div>
+          <div class="dest-card-bottom">
+            <a href="ma-pet-care.html" class="btn-dest">See Pet Care Picks →</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FREE RESOURCES -->
   <section class="section free-section">
     <div class="section-inner">
       <div class="section-eyebrow">Completely Free</div>
@@ -175,102 +186,54 @@
         </div>
       </div>
       <div class="free-form-wrap">
-        <p class="free-form-label" style="filter:none;">One sign-up gets you both — your activity pack and Book 2 updates <svg width="20" height="20" viewBox="0 0 100 100" fill="#C9841A" xmlns="http://www.w3.org/2000/svg"><path d="M50 45 C32 45 20 56 20 68 C20 80 32 88 50 88 C68 88 80 80 80 68 C80 56 68 45 50 45Z"/><ellipse cx="26" cy="35" rx="10" ry="13" transform="rotate(-15 26 35)"/><ellipse cx="74" cy="35" rx="10" ry="13" transform="rotate(15 74 35)"/><ellipse cx="40" cy="22" rx="9" ry="12" transform="rotate(-5 40 22)"/><ellipse cx="60" cy="22" rx="9" ry="12" transform="rotate(5 60 22)"/></svg></p>
+        <p class="free-form-label">One sign-up gets you both — your activity pack and Book 2 updates <svg width="18" height="18" viewBox="0 0 100 100" fill="#C9841A" xmlns="http://www.w3.org/2000/svg"><path d="M50 45 C32 45 20 56 20 68 C20 80 32 88 50 88 C68 88 80 80 80 68 C80 56 68 45 50 45Z"/><ellipse cx="26" cy="35" rx="10" ry="13" transform="rotate(-15 26 35)"/><ellipse cx="74" cy="35" rx="10" ry="13" transform="rotate(15 74 35)"/><ellipse cx="40" cy="22" rx="9" ry="12" transform="rotate(-5 40 22)"/><ellipse cx="60" cy="22" rx="9" ry="12" transform="rotate(5 60 22)"/></svg></p>
         <div style="text-align:left;width:100%;max-width:480px;" class="sender-form-field" data-sender-form-id="bW69jg"></div>
       </div>
     </div>
   </section>
 
-  
-  <!-- PET ESSENTIALS -->
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-eyebrow">Maverick Approved</div>
-      <div class="section-title">Pet Essentials We Actually Use</div>
-      <div class="paw-divider"><span><svg width="24" height="24" viewBox="0 0 100 100" fill="#C9841A" xmlns="http://www.w3.org/2000/svg"><path d="M50 45 C32 45 20 56 20 68 C20 80 32 88 50 88 C68 88 80 80 80 68 C80 56 68 45 50 45Z"/><ellipse cx="26" cy="35" rx="10" ry="13" transform="rotate(-15 26 35)"/><ellipse cx="74" cy="35" rx="10" ry="13" transform="rotate(15 74 35)"/><ellipse cx="40" cy="22" rx="9" ry="12" transform="rotate(-5 40 22)"/><ellipse cx="60" cy="22" rx="9" ry="12" transform="rotate(5 60 22)"/></svg></span></div>
-      <p style="font-size:0.92rem;color:var(--text-mid);line-height:1.75;margin-bottom:32px;">Everything below is something we genuinely use with Maverick. No filler recommendations — just the products that have made a real difference.</p>
-      <div class="pet-grid">
-
-        <div class="pet-card">
-          <div class="pet-card-top">
-            <span class="pet-tag">Essentials</span>
-            <h3>Earth Rated Dog Poo Bags</h3>
-            <p>The ones we actually use every day. Thick, lavender-scented and reliably leak-proof. If you own a dog you are buying poo bags regardless — these are genuinely the best we have tried.</p>
-          </div>
-          <div class="pet-card-bottom">
-            <span class="pet-source">Amazon UK</span>
-            <a href="https://amzn.to/3M7aw9V" target="_blank" rel="nofollow" class="pet-btn">Buy on Amazon</a>
+  <!-- BRAND AMBASSADOR -->
+  <section class="section ambassador-section">
+    <div class="ambassador-inner">
+      <div class="ambassador-grid">
+        <div class="ambassador-text">
+          <div class="section-eyebrow">Work With Us</div>
+          <div class="section-title">Become a <em>Brand Partner</em></div>
+          <p>Maverick's Adventures is a growing children's book brand with an engaged audience of parents and dog lovers across the UK. We're looking for brands that share our values to partner with.</p>
+          <p>Whether you're a pet brand, children's product, or family business — if your audience matches ours, let's talk.</p>
+          <div class="ambassador-perks">
+            <div class="perk"><span class="perk-icon">📊</span>2,000+ engaged followers across social</div>
+            <div class="perk"><span class="perk-icon">👨‍👩‍👧</span>Core audience: parents with children aged 2–6</div>
+            <div class="perk"><span class="perk-icon">🐶</span>Strong dog owner & cockapoo community</div>
+            <div class="perk"><span class="perk-icon">📈</span>Growing brand with active content calendar</div>
           </div>
         </div>
-
-        <div class="pet-card">
-          <div class="pet-card-top">
-            <span class="pet-tag">Dental Health</span>
-            <h3>Plaque Off Dental Powder</h3>
-            <p>A daily dental supplement sprinkled over food. We noticed a difference in Maverick's breath and plaque build-up within a few weeks. Vet recommended and genuinely easy to use — no tooth brushing required.</p>
-          </div>
-          <div class="pet-card-bottom">
-            <span class="pet-source">Amazon UK</span>
-            <a href="https://amzn.to/4rM28f4" target="_blank" rel="nofollow" class="pet-btn">Buy on Amazon</a>
-          </div>
+        <div class="ambassador-form-wrap">
+          <div class="ambassador-form-title">Let's Partner Up</div>
+          <div class="ambassador-form-sub">Leave your details and we'll be in touch within 2–3 working days to explore how we can work together.</div>
+          <div style="text-align:left;" class="sender-form-field" data-sender-form-id="dJ69zD"></div>
         </div>
-
-        <div class="pet-card pet-card-featured">
-          <div class="pet-card-top">
-            <span class="pet-tag pet-tag-offer">50% Off First Box</span>
-            <h3>Pure Pet Food</h3>
-            <p>Freshly prepared dog food delivered to your door. Real ingredients, no fillers, gently air-dried. We switched Maverick to Pure and the difference in his coat and energy was noticeable within two weeks. The wife was a convert before the first bag was empty.</p>
-            <div class="pet-offer-box">
-              <span class="pet-offer-label">Current Offer</span>
-              <p>50% off your first box + 20% off subsequent deliveries. Use our link to claim.</p>
-            </div>
-          </div>
-          <div class="pet-card-bottom">
-            <span class="pet-source">purepetfood.com</span>
-            <a href="https://purepetfood.com/s/RICK73288/w" target="_blank" rel="nofollow" class="pet-btn pet-btn-offer">Get 50% Off</a>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
-
-
-  <!-- BRAND AFFILIATE / AMBASSADOR SIGNUP -->
-  <section class="section" style="background:var(--brown-deep);">
-    <div class="section-inner" style="max-width:800px;">
-      <div class="section-eyebrow" style="color:var(--amber-light);">Work With Us</div>
-      <div class="section-title" style="color:var(--white);margin-bottom:16px;">Partner with <em style="font-style:italic;color:var(--amber-light);">Maverick</em></div>
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:32px;">
-        <div style="flex:1;height:1px;background:rgba(255,255,255,0.1);"></div>
-        <span style="font-size:0.9rem;filter:sepia(1) saturate(5) hue-rotate(2deg) brightness(0.85);">🐾</span>
-        <div style="flex:1;height:1px;background:rgba(255,255,255,0.1);"></div>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:36px;">
-        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;">
-          <div style="font-size:1.8rem;margin-bottom:10px;">🐾</div>
-          <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:8px;">Brand Ambassador</h3>
-          <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.65;">Maverick has over 2,000 engaged Instagram followers — dog owners and parents of young children. Perfect for pet brands, children's products and family-focused businesses.</p>
-        </div>
-        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;">
-          <div style="font-size:1.8rem;margin-bottom:10px;">📦</div>
-          <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:8px;">Affiliate Partnership</h3>
-          <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.65;">We feature products we genuinely use and believe in. If your product is a great fit for our audience, we would love to hear from you.</p>
-        </div>
-      </div>
-      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:32px;">
-        <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);margin-bottom:20px;text-align:center;">Register your interest below and we will be in touch.</p>
-        <div style="text-align:left" class="sender-form-field" data-sender-form-id="dJ69zD"></div>
-      </div>
-    </div>
-  </section>
-
-<div class="disclosure">
-    <p>This page contains affiliate links. We may earn a small commission if you purchase through our Amazon links at no extra cost to you. This helps support the Maverick's Adventures series.</p>
-  </div>
 
   <footer class="footer">
-    <p>© 2026 Maverick's Adventures. All rights reserved.</p>
+    <p>© 2026 Maverick's Adventures. All rights reserved. &nbsp;·&nbsp; <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="ma-books.html">Books</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/MaverickAdventure5" target="_blank">Instagram</a></p>
   </footer>
+
+  <script>
+    var toggle = document.querySelector('.nav-mobile-toggle');
+    var navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', function(){
+      navLinks.classList.toggle('open');
+      toggle.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        navLinks.classList.remove('open');
+        toggle.textContent = '☰';
+      });
+    });
+  </script>
 </body>
 </html>

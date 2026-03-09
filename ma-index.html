@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mavericks Adventures — A Delightful Children's Book Series</title>
+  <meta name="description" content="Join Maverick the cockapoo on exciting rhyming adventures perfect for children ages 2-6. Available now on Amazon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brown-deep: #3D1F0A;
+      --brown-mid:  #6B3A1F;
+      --brown-light:#A0623A;
+      --cream:      #FDF6EC;
+      --cream-dark: #F5EAD8;
+      --amber:      #C9841A;
+      --amber-light:#F0A830;
+      --sage:       #7A9E6E;
+      --white:      #FFFFFF;
+      --text:       #3D1F0A;
+      --text-mid:   #6B4C35;
+      --text-muted: #A08070;
+      --border:     #E8D5BC;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* Paper grain texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.5;
+    }
+
+    /* ── NAV ─────────────────────────────────────────────── */
+    .nav {
+      background: var(--brown-deep);
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--amber);
+    }
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--amber-light);
+      text-decoration: none;
+      padding: 16px 0;
+      letter-spacing: 0.01em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--amber-light); }
+    .nav-cta {
+      background: var(--amber) !important;
+      color: var(--white) !important;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.78rem !important;
+    }
+    .nav-cta:hover { background: var(--amber-light) !important; color: var(--brown-deep) !important; }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--amber-light); font-size: 1.5rem; }
+
+    /* ── HERO ─────────────────────────────────────────────── */
+    .hero {
+      background: var(--brown-deep);
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 20% 50%, rgba(201,132,26,0.08) 0%, transparent 60%),
+                        radial-gradient(circle at 80% 20%, rgba(122,158,110,0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 88vh;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 72px 48px 72px 40px;
+      animation: fadeUp 0.8s ease both;
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-eyebrow::before { content: ''; }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      color: var(--white);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--amber-light);
+    }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.75;
+      margin-bottom: 36px;
+      max-width: 420px;
+    }
+    .hero-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 50px;
+      letter-spacing: 0.04em;
+    }
+    .badge-cream { background: rgba(253,246,236,0.1); color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.12); }
+    .badge-amber { background: rgba(201,132,26,0.2); color: var(--amber-light); border: 1px solid rgba(201,132,26,0.3); }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-amber {
+      background: var(--amber);
+      color: var(--white);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.88rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 20px rgba(201,132,26,0.35);
+    }
+    .btn-amber:hover { background: var(--amber-light); color: var(--brown-deep); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,132,26,0.4); }
+    .btn-outline {
+      background: transparent;
+      color: rgba(255,255,255,0.7);
+      border: 1px solid rgba(255,255,255,0.2);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--amber-light); color: var(--amber-light); }
+    .hero-image {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      animation: fadeUp 0.8s 0.2s ease both;
+      overflow: hidden;
+    }
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* ── STATS BAR ────────────────────────────────────────── */
+    .stats-bar {
+      background: var(--amber);
+      padding: 18px 40px;
+    }
+    .stats-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .stat-item { display: flex; align-items: center; gap: 10px; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--white);
+    }
+    .stat-label { font-size: 0.78rem; font-weight: 700; color: rgba(255,255,255,0.75); letter-spacing: 0.04em; text-transform: uppercase; }
+    .stat-divider { width: 1px; height: 32px; background: rgba(255,255,255,0.25); }
+
+    /* ── SECTION BASE ─────────────────────────────────────── */
+    .section { padding: 80px 40px; position: relative; z-index: 1; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      color: var(--brown-deep);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .section-sub { font-size: 1rem; color: var(--text-muted); max-width: 560px; line-height: 1.75; margin-bottom: 48px; }
+
+    /* Paw divider */
+    .paw-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 40px;
+    }
+    .paw-divider span { font-size: 1.3rem; color: #C9841A; filter: none; }
+    .paw-divider::before, .paw-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── BOOK SECTION ─────────────────────────────────────── */
+    .book-section { background: var(--cream-dark); }
+    .book-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .book-cover-wrap {
+      position: relative;
+    }
+    .book-cover-img {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: -8px 8px 0 var(--brown-mid), -16px 16px 0 rgba(61,31,10,0.15), 12px 24px 48px rgba(61,31,10,0.35);
+      transform: rotate(-1.5deg);
+      transition: transform 0.3s;
+    }
+    .book-cover-img:hover { transform: rotate(0deg) scale(1.02); }
+    .book-badge {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      background: var(--sage);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 50px;
+      transform: rotate(3deg);
+      box-shadow: 0 4px 12px rgba(122,158,110,0.4);
+    }
+    .book-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 2.2rem;
+      color: var(--brown-deep);
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .book-info h2 em { font-style: italic; color: var(--amber); }
+    .book-info .by-line { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; margin-bottom: 20px; }
+    .book-info p { font-size: 0.97rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 24px; }
+    .book-meta {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .book-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .book-meta-label { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+    .book-meta-val { font-size: 0.92rem; font-weight: 700; color: var(--brown-deep); }
+    .buy-box {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+    .amazon-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 1.4rem;
+      color: var(--brown-deep);
+      background: var(--amber-light);
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .buy-box-text { flex: 1; }
+    .buy-box-text strong { display: block; font-size: 0.9rem; color: var(--brown-deep); margin-bottom: 2px; }
+    .buy-box-text span { font-size: 0.78rem; color: var(--text-muted); }
+    .btn-buy {
+      background: var(--amber);
+      color: var(--white);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 11px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .btn-buy:hover { background: var(--amber-light); color: var(--brown-deep); }
+    .prime-note { font-size: 0.75rem; color: var(--text-muted); }
+
+    /* ── FEATURES ─────────────────────────────────────────── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .feature-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 24px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(61,31,10,0.1); }
+    .feature-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+    .feature-card h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.05rem; color: var(--brown-deep); margin-bottom: 8px; }
+    .feature-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* ── REVIEWS ──────────────────────────────────────────── */
+    .reviews-section { background: var(--brown-deep); }
+    .reviews-section .section-title { color: var(--white); }
+    .reviews-section .section-eyebrow { color: var(--amber-light); }
+    .reviews-section .section-sub { color: rgba(255,255,255,0.45); }
+    .stars { color: var(--amber-light); font-size: 1rem; letter-spacing: 2px; margin-bottom: 10px; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .review-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 28px 24px;
+      transition: background 0.2s;
+    }
+    .review-card:hover { background: rgba(255,255,255,0.08); }
+    .review-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.97rem; color: rgba(255,255,255,0.75); line-height: 1.75; margin-bottom: 16px; }
+    .review-author { font-size: 0.78rem; font-weight: 700; color: var(--amber-light); letter-spacing: 0.06em; text-transform: uppercase; }
+    .review-source { font-size: 0.72rem; color: rgba(255,255,255,0.3); margin-top: 3px; }
+
+    /* ── MAVERICK SECTION ─────────────────────────────────── */
+    .maverick-section { background: var(--cream); }
+    .maverick-grid {
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      gap: 64px;
+      align-items: center;
+    }
+    .maverick-text h2 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 2rem; color: var(--brown-deep); line-height: 1.2; margin-bottom: 16px; }
+    .maverick-text h2 em { font-style: italic; color: var(--amber); }
+    .maverick-text p { font-size: 0.97rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 16px; }
+    .maverick-photo {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(61,31,10,0.2);
+    }
+    .maverick-photo img { width: 100%; display: block; }
+
+    /* ── NEWSLETTER ───────────────────────────────────────── */
+    .newsletter-section { background: var(--cream-dark); }
+    .newsletter-box {
+      background: var(--brown-deep);
+      border-radius: 20px;
+      padding: 56px 64px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .newsletter-box::before {
+      content: '🐾🐾🐾';
+      position: absolute;
+      bottom: -10px;
+      right: 32px;
+      font-size: 4rem;
+      opacity: 0.06;
+      letter-spacing: 12px;
+    }
+    .newsletter-text h2 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 1.8rem; color: var(--white); line-height: 1.2; margin-bottom: 12px; }
+    .newsletter-text h2 em { font-style: italic; color: var(--amber-light); }
+    .newsletter-text p { font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+    .newsletter-form { display: flex; flex-direction: column; gap: 12px; }
+    .newsletter-form a {
+      display: block;
+      background: var(--amber);
+      color: var(--white);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.2s;
+      box-shadow: 0 4px 20px rgba(201,132,26,0.35);
+    }
+    .newsletter-form a:hover { background: var(--amber-light); color: var(--brown-deep); }
+    .newsletter-note { font-size: 0.72rem; color: rgba(255,255,255,0.25); text-align: center; }
+
+    /* ── FOOTER ───────────────────────────────────────────── */
+    .footer { background: #2A1506; padding: 56px 40px 28px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 28px;
+    }
+    .footer-brand-col h3 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 1.3rem; color: var(--amber-light); margin-bottom: 10px; }
+    .footer-brand-col p { font-size: 0.82rem; color: rgba(255,255,255,0.35); line-height: 1.7; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 12px; }
+    .footer-social a {
+      width: 36px; height: 36px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .footer-social a:hover { background: var(--amber); color: var(--white); border-color: var(--amber); }
+    .footer-col h4 { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+    .footer-col a { display: block; font-size: 0.84rem; color: rgba(255,255,255,0.45); text-decoration: none; margin-bottom: 9px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--amber-light); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 0.74rem; color: rgba(255,255,255,0.2); }
+    .footer-bottom .affiliate-note { font-size: 0.68rem; color: rgba(255,255,255,0.15); }
+
+    /* ── ANIMATIONS ───────────────────────────────────────── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ── RESPONSIVE ───────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-image { min-height: 360px; }
+      .book-grid { grid-template-columns: 1fr; gap: 40px; }
+      .features-grid { grid-template-columns: 1fr 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .maverick-grid { grid-template-columns: 1fr; }
+      .newsletter-box { grid-template-columns: 1fr; padding: 40px 32px; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .stats-inner { gap: 24px; }
+    }
+    @media (max-width: 540px) {
+      .section { padding: 56px 20px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .hero-content { padding: 48px 20px; }
+      .nav { padding: 0 20px; }
+      .stats-bar { padding: 18px 20px; }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS5VR0KGVT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SS5VR0KGVT');
+  </script>
+  <script>
+    (function (s, e, n, d, er) {
+      s['Sender'] = er;
+      s[er] = s[er] || function () {
+        (s[er].q = s[er].q || []).push(arguments)
+      }, s[er].l = 1 * new Date();
+      var a = e.createElement(n),
+          m = e.getElementsByTagName(n)[0];
+      a.async = 1;
+      a.src = d;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+    sender('89edea74209101')
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="https://www.mavericksadventures.co.uk" class="nav-brand">Maverick's Adventures</a>
+    <button class="nav-mobile-toggle" onclick="document.querySelector('.nav-links').style.display='flex'">☰</button>
+    <ul class="nav-links">
+      <li><a href="https://www.mavericksadventures.co.uk">Home</a></li>
+      <li><a href="https://www.mavericksadventures.co.uk/ma-meet-maverick.html">Meet The Star</a></li>
+      <li><a href="https://www.mavericksadventures.co.uk/ma-books.html">The Books</a></li>
+      <li><a href="https://www.mavericksadventures.co.uk/ma-shop.html">Shop & Deals</a></li>
+      <li><a href="https://www.mavericksadventures.co.uk/ma-blog.html">Blog</a></li>
+      <li><a href="https://amzn.to/4628qPf" target="_blank" rel="nofollow" class="nav-cta">Buy the Book</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-pattern"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow"><svg width="20" height="20" viewBox="0 0 100 100" fill="#C9841A" xmlns="http://www.w3.org/2000/svg"><path d="M50 45 C32 45 20 56 20 68 C20 80 32 88 50 88 C68 88 80 80 80 68 C80 56 68 45 50 45Z"/><ellipse cx="26" cy="35" rx="10" ry="13" transform="rotate(-15 26 35)"/><ellipse cx="74" cy="35" rx="10" ry="13" transform="rotate(15 74 35)"/><ellipse cx="40" cy="22" rx="9" ry="12" transform="rotate(-5 40 22)"/><ellipse cx="60" cy="22" rx="9" ry="12" transform="rotate(5 60 22)"/></svg> A Delightful Children's Book Series</div>
+        <h1>Adventures with <em>Maverick</em></h1>
+        <p class="hero-sub">Join Maverick the cockapoo on exciting rhyming adventures — perfect for children ages 2–6. Each book brings new discoveries, playful learning and unforgettable fun.</p>
+        <div class="hero-badges">
+          <span class="badge badge-cream">📖 Ages 2–6</span>
+          <span class="badge badge-amber">⭐ On Amazon</span>
+          <span class="badge badge-cream">🚚 Prime Delivery</span>
+        </div>
+        <div class="hero-actions">
+          <a href="https://amzn.to/4628qPf" target="_blank" rel="nofollow" class="btn-amber">📦 Order on Amazon</a>
+          <a href="https://www.mavericksadventures.co.uk/ma-books.html" class="btn-outline">Meet the Books</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="maverick-hero.png" alt="Maverick the cockapoo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-num">7</span>
+        <span class="stat-label">Copies Sold</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Amazon Reviews</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">2,000+</span>
+        <span class="stat-label">Instagram Followers</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">Ages 2–6</span>
+        <span class="stat-label">Perfect For</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK SECTION -->
+  <section class="section book-section">
+    <div class="section-inner">
+      <div class="book-grid">
+        <div class="book-cover-wrap">
+          <img src="book-cover.png" alt="Where is Maverick — A Rhyming Hide and Seek Story for Children" class="book-cover-img" onerror="this.style.display='none'" />
+          <span class="book-badge">Book 1</span>
+        </div>
+        <div class="book-info">
+          <div class="section-eyebrow">Now Available</div>
+          <h2><em>Where is Maverick?</em></h2>
+          <p class="by-line">By Rick Shirley</p>
+          <p>A fun rhyming hide-and-seek story following Maverick the cockapoo through a colourful adventure. Vibrant illustrations, engaging rhythms and a loveable character make every read-aloud a delight for parents and children alike.</p>
+          <div class="book-meta">
+            <div class="book-meta-item">
+              <span class="book-meta-label">Format</span>
+              <span class="book-meta-val">Paperback & Kindle</span>
+            </div>
+            
+            
+            <div class="book-meta-item">
+              <span class="book-meta-label">Ages</span>
+              <span class="book-meta-val">2–6 Years</span>
+            </div>
+          </div>
+          <div class="buy-box">
+            <div class="amazon-logo">a</div>
+            <div class="buy-box-text">
+              <strong>Available on Amazon UK</strong>
+              <span>Fast delivery — eligible for Prime</span>
+            </div>
+            <a href="https://amzn.to/4628qPf" target="_blank" rel="nofollow" class="btn-buy">Buy Now</a>
+          </div>
+          <p class="prime-note">🚚 Prime eligible — order today for fast delivery</p>
+        </div>
+      </div>
+
+      <!-- FEATURES -->
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">📖</span>
+          <h3>Perfect for Ages 2–6</h3>
+          <p>Carefully crafted with age-appropriate vocabulary and themes that young children can understand and enjoy.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🎵</span>
+          <h3>Delightful Rhymes</h3>
+          <p>Engaging rhyming patterns that make reading aloud fun and help develop early literacy skills naturally.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🎨</span>
+          <h3>Beautiful Illustrations</h3>
+          <p>Vibrant, colourful artwork that brings Maverick's adventures to life on every page.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section reviews-section">
+    <div class="section-inner">
+      <div class="section-eyebrow">What Readers Say</div>
+      <div class="section-title" style="color:var(--white)">Loved by families</div>
+      <div class="paw-divider" style="--border:rgba(255,255,255,0.1)"><span><svg width="24" height="24" viewBox="0 0 100 100" fill="#C9841A" xmlns="http://www.w3.org/2000/svg"><path d="M50 45 C32 45 20 56 20 68 C20 80 32 88 50 88 C68 88 80 80 80 68 C80 56 68 45 50 45Z"/><ellipse cx="26" cy="35" rx="10" ry="13" transform="rotate(-15 26 35)"/><ellipse cx="74" cy="35" rx="10" ry="13" transform="rotate(15 74 35)"/><ellipse cx="40" cy="22" rx="9" ry="12" transform="rotate(-5 40 22)"/><ellipse cx="60" cy="22" rx="9" ry="12" transform="rotate(5 60 22)"/></svg></span></div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"As a parent, I appreciate books that are both entertaining and educational. Where is Maverick? delivers on both fronts. Highly recommend!"</p>
+          <p class="review-author">Ken L.</p>
+          <p class="review-source">Verified Reader</p>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"The illustrations are gorgeous and the story is engaging. This has become our go-to bedtime story. Thank you for creating such a wonderful book!"</p>
+          <p class="review-author">Tara K.</p>
+          <p class="review-source">Verified Reader</p>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"My 3-year-old daughter absolutely loves this book! The rhymes are catchy and she's already memorised some of the lines. Can't wait for the next adventure!"</p>
+          <p class="review-author">Lewis S.</p>
+          <p class="review-source">Verified Reader</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEET MAVERICK TEASER -->
+  <section class="section maverick-section">
+    <div class="section-inner">
+      <div class="maverick-grid">
+        <div class="maverick-text">
+          <div class="section-eyebrow">The Star of the Series</div>
+          <h2>Meet <em>Maverick</em></h2>
+          <div class="paw-divider"><span><svg width="24" height="24" viewBox="0 0 100 100" fill="#C9841A" xmlns="http://www.w3.org/2000/svg"><path d="M50 45 C32 45 20 56 20 68 C20 80 32 88 50 88 C68 88 80 80 80 68 C80 56 68 45 50 45Z"/><ellipse cx="26" cy="35" rx="10" ry="13" transform="rotate(-15 26 35)"/><ellipse cx="74" cy="35" rx="10" ry="13" transform="rotate(15 74 35)"/><ellipse cx="40" cy="22" rx="9" ry="12" transform="rotate(-5 40 22)"/><ellipse cx="60" cy="22" rx="9" ry="12" transform="rotate(5 60 22)"/></svg></span></div>
+          <p>Maverick is a real cockapoo with a huge personality and an even bigger love of adventure. Every story in the series is inspired by his real-life exploits — making each book feel genuinely lived-in, warm and full of character.</p>
+          <p>From hide-and-seek in the garden to exploring the world around him, Maverick's adventures are the kind that children recognise and parents remember fondly from their own childhood.</p>
+          <a href="https://www.mavericksadventures.co.uk/ma-meet-maverick.html" class="btn-amber" style="display:inline-flex;margin-top:8px;">Meet Maverick 🐾</a>
+        </div>
+        <div class="maverick-photo">
+          <img src="maverick-photo.jpg" alt="Maverick the cockapoo" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section newsletter-section">
+    <div class="section-inner">
+      <div class="newsletter-box">
+        <div class="newsletter-text">
+          <h2>Get <em>Free Activity Pack</em> — and be first to hear about Book 2</h2>
+          <p>Sign up for updates and we will send you free Maverick activity pack instantly. Plus you will be the first to know when Book 2 is available.</p>
+        </div>
+        <div class="newsletter-form">
+          <div style="text-align:left" class="sender-form-field" data-sender-form-id="bW69jg"></div>
+          <p class="newsletter-note">No spam. Unsubscribe any time. We respect your privacy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <h3>Maverick's Adventures</h3>
+          <p>A heartwarming children's book series based on the real adventures of Maverick, our loveable cockapoo. Perfect for little ones ages 2–6.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/MaverickAdventure5/" target="_blank" title="Instagram">IG</a>
+            <a href="https://www.facebook.com/profile.php?id=61587747405766" target="_blank" title="Facebook">FB</a>
+            <a href="https://uk.pinterest.com/mavericksadventures/" target="_blank" title="Pinterest">PT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="https://www.mavericksadventures.co.uk">Home</a>
+          <a href="https://www.mavericksadventures.co.uk/ma-meet-maverick.html">Meet The Star</a>
+          <a href="https://www.mavericksadventures.co.uk/ma-books.html">The Books</a>
+          <a href="https://www.mavericksadventures.co.uk/ma-shop.html">Shop & Deals</a>
+          <a href="https://www.mavericksadventures.co.uk/ma-blog.html">Blog</a>
+        </div>
+        <div class="footer-col">
+          <h4>The Book</h4>
+          <a href="https://amzn.to/4628qPf" target="_blank" rel="nofollow">Buy on Amazon</a>
+          <a href="https://www.mavericksadventures.co.uk/ma-books.html">Book 1 — Where is Maverick?</a>
+          <a href="https://www.mavericksadventures.co.uk/ma-books.html">Book 2 — Coming Soon</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://stats.sender.net/forms/aJRJwN/view" target="_blank">Free Activity Pack</a>
+          <a href="https://www.instagram.com/MaverickAdventure5/" target="_blank">Instagram</a>
+          <a href="https://www.digitalrevenuestudio.co.uk" target="_blank">DRS — Behind the Scenes</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Maverick's Adventures. All rights reserved.</p>
+        <p class="affiliate-note">This site uses affiliate links. We may earn a small commission if you purchase through our links at no extra cost to you.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

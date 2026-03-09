@@ -48,16 +48,28 @@
     .newsletter-box a:hover{background:var(--amber-light);color:var(--brown-deep);}
     .footer{background:#2A1506;padding:28px 40px;text-align:center;}
     .footer p{font-size:0.74rem;color:rgba(255,255,255,0.2);}
-    @media(max-width:720px){.blog-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
+    @media(max-width:720px){.blog-grid{grid-template-columns:1fr;}}
     @media(max-width:540px){.section{padding:56px 20px;}.page-hero{padding:56px 20px;}.nav{padding:0 20px;}}
+  
+    .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--amber-light);font-size:1.6rem;padding:4px 8px;line-height:1;}
+    @media(max-width:900px){
+      .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--brown-deep);border-top:2px solid var(--amber);padding:16px 0;z-index:200;}
+      .nav-links.open{display:flex;}
+      .nav-links li{width:100%;}
+      .nav-links a{display:block;padding:12px 24px;font-size:0.9rem;border-bottom:1px solid rgba(255,255,255,0.05);}
+      .nav-links a:last-child{border-bottom:none;}
+      .nav-cta{margin:10px 24px;text-align:center;border-radius:50px!important;border-bottom:none!important;}
+      .nav-mobile-toggle{display:block;}
+      .nav{position:relative;}
+    }
   </style>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EXQ12CDJS"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS5VR0KGVT"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-8EXQ12CDJS');
+    gtag('config', 'G-SS5VR0KGVT');
   </script>
   <script>
     (function (s, e, n, d, er) {
@@ -139,5 +151,19 @@
   <footer class="footer">
     <p>© 2026 Maverick's Adventures. All rights reserved.</p>
   </footer>
+  <script>
+    var toggle = document.querySelector('.nav-mobile-toggle');
+    var navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', function(){
+      navLinks.classList.toggle('open');
+      toggle.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        navLinks.classList.remove('open');
+        toggle.textContent = '☰';
+      });
+    });
+  </script>
 </body>
 </html>
