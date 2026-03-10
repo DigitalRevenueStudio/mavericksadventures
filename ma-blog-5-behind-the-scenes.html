@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How We Created Where is Maverick? — Behind the Scenes | Maverick's Adventures</title>
+  <meta name="description" content="The real story behind the first Maverick's Adventures book — from idea to Amazon listing. How a cockapoo's hide-and-seek habit became a children's book." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brown-deep: #3D1F0A;
+      --brown-mid: #6B3A1F;
+      --amber: #C9841A;
+      --amber-light: #F0A830;
+      --sage: #7A9E6E;
+      --cream: #FDF6EC;
+      --cream-dark: #F5EAD8;
+      --white: #FFFFFF;
+      --text: #3D1F0A;
+      --text-mid: #6B4C35;
+      --text-muted: #A08070;
+      --border: #E8D5BC;
+      --teal-dark: #3D1F0A;
+      --teal-mid: #6B3A1F;
+      --teal-bright: #C9841A;
+      --amber-dark: #A0620E;
+      --text-dark: #3D1F0A;
+      --text-body: #6B4C35;
+      --warm-grey: #F5EAD8;
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);line-height:1.75;}
+    .wrapper{max-width:760px;margin:0 auto;padding:60px 32px 80px;}
+
+    /* HEADER */
+    .blog-header{border-bottom:2px solid var(--border);padding-bottom:40px;margin-bottom:48px;}
+    .blog-source{font-size:0.7rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+    .blog-source::before{content:'🐾';font-size:0.9rem;}
+    h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(1.9rem,4vw,2.8rem);color:var(--brown-deep);line-height:1.15;margin-bottom:20px;}
+    h1 em{font-style:italic;color:var(--amber);}
+    .blog-intro{font-size:1.05rem;color:var(--text-mid);line-height:1.8;border-left:3px solid var(--amber);padding-left:20px;margin-bottom:24px;font-style:italic;}
+    .blog-meta{display:flex;gap:20px;flex-wrap:wrap;}
+    .meta-tag{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);display:flex;align-items:center;gap:6px;}
+    .meta-tag::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--amber);flex-shrink:0;}
+
+    /* BODY */
+    p{font-size:1rem;color:var(--text-mid);line-height:1.85;margin-bottom:20px;}
+    h2{font-family:'Playfair Display',serif;font-weight:800;font-size:1.6rem;color:var(--brown-deep);margin:44px 0 16px;line-height:1.2;}
+    h2 em{font-style:italic;color:var(--amber);}
+
+    /* MILESTONE TIMELINE */
+    .timeline{margin:32px 0;}
+    .timeline-item{display:flex;gap:20px;margin-bottom:4px;align-items:stretch;}
+    .timeline-left{display:flex;flex-direction:column;align-items:center;width:40px;flex-shrink:0;}
+    .timeline-dot{width:14px;height:14px;border-radius:50%;background:var(--amber);border:3px solid var(--cream);box-shadow:0 0 0 2px var(--amber);flex-shrink:0;margin-top:4px;}
+    .timeline-line{flex:1;width:2px;background:var(--border);margin:4px 0;}
+    .timeline-item:last-child .timeline-line{display:none;}
+    .timeline-content{padding:0 0 28px;}
+    .timeline-step{font-size:0.68rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:var(--amber);margin-bottom:5px;}
+    .timeline-content h3{font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;color:var(--brown-deep);margin-bottom:8px;}
+    .timeline-content p{font-size:0.9rem;color:var(--text-muted);line-height:1.7;margin:0;}
+
+    /* CALLOUT */
+    .callout{background:var(--cream-dark);border:1px solid var(--border);border-radius:8px;padding:24px 28px;margin:28px 0;position:relative;}
+    .callout::before{content:'💡';position:absolute;top:-13px;left:20px;background:var(--cream);padding:0 8px;font-size:1rem;}
+    .callout p{font-size:0.95rem;color:var(--text-mid);line-height:1.8;margin:0;}
+    .callout strong{color:var(--brown-deep);}
+
+    /* STATS */
+    .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0;}
+    .stat-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:20px;text-align:center;}
+    .stat-num{font-family:'Playfair Display',serif;font-weight:900;font-size:2rem;color:var(--amber);display:block;line-height:1;}
+    .stat-label{font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-top:6px;display:block;}
+
+    /* REVIEW QUOTE */
+    .review-quote{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:24px 28px;margin:24px 0;position:relative;}
+    .review-stars{color:var(--amber-light);font-size:1rem;letter-spacing:3px;margin-bottom:10px;}
+    .review-quote blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--text-mid);line-height:1.75;margin-bottom:10px;}
+    .review-author{font-size:0.78rem;font-weight:700;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;}
+
+    /* CTA */
+    .cta-box{background:var(--brown-deep);border-radius:12px;padding:36px;margin-top:48px;text-align:center;}
+    .cta-box h3{font-family:'Playfair Display',serif;font-weight:800;font-size:1.6rem;color:var(--white);margin-bottom:10px;}
+    .cta-box h3 em{font-style:italic;color:var(--amber-light);}
+    .cta-box p{font-size:0.92rem;color:rgba(255,255,255,0.5);max-width:440px;margin:0 auto 24px;line-height:1.7;}
+    .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+    .btn-amber{display:inline-block;background:var(--amber);color:var(--white);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.82rem;letter-spacing:0.06em;text-transform:uppercase;padding:12px 28px;border-radius:50px;text-decoration:none;transition:all 0.2s;}
+    .btn-amber:hover{background:var(--amber-light);color:var(--brown-deep);}
+    .btn-outline{display:inline-block;background:transparent;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.2);font-family:'Nunito',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:0.06em;text-transform:uppercase;padding:11px 24px;border-radius:50px;text-decoration:none;transition:all 0.2s;}
+    .btn-outline:hover{border-color:var(--amber-light);color:var(--amber-light);}
+
+    .divider{display:flex;align-items:center;gap:12px;margin:40px 0;}
+    .divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border);}
+    .divider span{font-size:0.9rem;}
+
+    .footer{background:#2A1506;padding:40px 32px 28px;text-align:center;margin-top:64px;}
+  .footer-brand{font-family:'Playfair Display',serif;font-style:italic;font-size:1.4rem;color:var(--amber-light);margin-bottom:6px;}
+  .footer-tag{color:rgba(255,255,255,0.5)!important;font-style:italic;}
+  .footer p{color:rgba(255,255,255,0.3);font-size:0.8rem;margin-top:6px;}
+  @media(max-width:580px){
+      .wrapper{padding:40px 20px 60px;}
+      .stats-row{grid-template-columns:1fr 1fr;}
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS5VR0KGVT"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SS5VR0KGVT');</script>
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="blog-header">
+    <div class="blog-source">Maverick's Adventures — Behind the Books</div>
+    <h1>How We Created <em>Where is Maverick?</em> — From Idea to Amazon</h1>
+    <p class="blog-intro">The real story behind the first book in the Maverick's Adventures series. Not the polished version — the actual process, including what we did not expect and what we would do differently.</p>
+    <div class="blog-meta">
+      <span class="meta-tag">Behind the Scenes</span>
+      <span class="meta-tag">Children's Books</span>
+      <span class="meta-tag">Self Publishing</span>
+    </div>
+  </div>
+
+  <p>Every book starts somewhere. For <em>Where is Maverick?</em> it started with a cockapoo who had an inexplicable talent for disappearing into the smallest, most inconvenient spaces at the most inopportune moments.</p>
+
+  <p>Maverick has always done this. He finds a spot — behind the sofa, under a blanket, wedged behind a plant pot in the garden — and waits, apparently thrilled with himself, while everyone else looks for him. It is genuinely funny every single time. And at some point the thought arrived: this is a children's book. A real one. A proper hide-and-seek story with a real dog at the centre of it.</p>
+
+  <p>That thought sat around for a while, as thoughts do. Then we decided to actually do something with it.</p>
+
+  <h2>The Process — <em>How the Book Got Made</em></h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-left"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+      <div class="timeline-content">
+        <div class="timeline-step">Step 01</div>
+        <h3>Writing the story</h3>
+        <p>The brief was simple: a rhyming hide-and-seek story, age appropriate for 2-6 year olds, with Maverick as the star. The rhyming format came naturally — it makes read-alouds more enjoyable for parents and helps young children follow along. We went through several drafts to get the rhythm right and make sure every page had the right balance of text and space for illustration.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-left"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+      <div class="timeline-content">
+        <div class="timeline-step">Step 02</div>
+        <h3>Creating the illustrations</h3>
+        <p>The illustrations were one of the most important decisions. A children's book lives or dies on its artwork. We wanted vibrant, warm and age-appropriate illustrations that brought Maverick's character to life — curious, playful, instantly loveable. The finished illustrations gave the book exactly the feel we were hoping for.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-left"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+      <div class="timeline-content">
+        <div class="timeline-step">Step 03</div>
+        <h3>Publishing on Amazon KDP</h3>
+        <p>We used Amazon KDP (Kindle Direct Publishing) to publish — both paperback and Kindle editions. KDP is free to use, handles printing on demand for physical copies and makes the book available globally on Amazon automatically. The process took around 72 hours from submission to the book being live. No upfront printing costs, no warehouse, no minimum order quantities.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-left"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+      <div class="timeline-content">
+        <div class="timeline-step">Step 04</div>
+        <h3>Building the brand around Maverick</h3>
+        <p>The book was always going to be part of something bigger. We built the Maverick's Adventures Instagram, the website and the Blogger alongside the book launch — creating a space where the series could grow, where we could share Maverick's real adventures and where readers could follow along for Book 2 news and free activity packs.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Where We Are <em>Right Now</em></h2>
+
+  <div class="stats-row">
+    <div class="stat-card"><span class="stat-num">7</span><span class="stat-label">Copies Sold</span></div>
+    <div class="stat-card"><span class="stat-num">2,000+</span><span class="stat-label">Instagram Followers</span></div>
+    <div class="stat-card"><span class="stat-num">5 ★</span><span class="stat-label">Reader Reviews</span></div>
+  </div>
+
+  <p>Seven copies sold, a growing Instagram following and the kind of reader feedback that makes the whole thing feel worth it. We are being transparent about the numbers because we think honesty matters more than the polished version — and because seven copies sold in the first weeks of a self-published children's book with no marketing budget is actually a reasonable start.</p>
+
+  <p>The reviews have been the best part. We did not ask for people to be kind — we asked for honest reactions. And the responses have been genuinely lovely.</p>
+
+  <div class="review-quote">
+    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <blockquote>"My 3-year-old daughter absolutely loves this book! The rhymes are catchy and she's already memorised some of the lines. Can't wait for the next adventure!"</blockquote>
+    <div class="review-author">Lewis S. — Verified Reader</div>
+  </div>
+
+  <div class="review-quote">
+    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <blockquote>"The illustrations are gorgeous and the story is engaging. This has become our go-to bedtime story. Thank you for creating such a wonderful book!"</blockquote>
+    <div class="review-author">Tara K. — Verified Reader</div>
+  </div>
+
+  <div class="callout">
+    <p><strong>The thing we did not expect:</strong> How much the Instagram community would respond to Maverick himself — not just the book. People follow because they genuinely love watching a real cockapoo being exactly himself. That authenticity is something a fictional character cannot replicate, and it has become one of the strongest things about the brand.</p>
+  </div>
+
+  <div class="divider"><span>🐾</span></div>
+
+  <h2>What Comes <em>Next</em></h2>
+
+  <p>Book 2 is in development. We are not going to rush it — the first book took the time it needed to be right, and the second one will too. When it is ready, everyone on the mailing list will be the first to know.</p>
+
+  <p>In the meantime we are focused on growing the Maverick's Adventures community — more content, more of Maverick's real adventures on Instagram, and a free activity pack for anyone who signs up to the list. If you have not grabbed it yet, it is waiting for you below.</p>
+
+  <div class="cta-box">
+    <h3>Get the <em>Free Activity Pack</em></h3>
+    <p>Sign up for Maverick's Adventures updates and get your free activity pack instantly. Plus you will be first to know when Book 2 is available.</p>
+    <div class="cta-btns">
+      <a href="https://www.mavericksadventures.co.uk" target="_blank" class="btn-amber">Get the Free Activity Pack</a>
+      <a href="https://amzn.to/4628qPf" target="_blank" rel="nofollow" class="btn-outline">Buy the Book on Amazon</a>
+    </div>
+  </div>
+
+</div>
+
+  <footer class="footer">
+    <div class="footer-brand">Maverick's Adventures</div>
+    <p class="footer-tag">Real dog. Real adventures. Real stories.</p>
+    <p>mavericksadventures.co.uk</p>
+    <p style="margin-top:6px;">&copy; 2026 Maverick's Adventures. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

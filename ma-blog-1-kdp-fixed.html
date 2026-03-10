@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How We Turned Our Cockapoo Into a Children's Book Character (And Published on Amazon KDP UK) | Maverick's Adventures</title>
+  <meta name="description" content="How we published Where is Maverick on Amazon KDP UK, earned first royalties, got 3 reviews and grew to 2,000+ Instagram followers in 4 weeks. The real story behind turning a cockapoo into a brand." />
+  <meta name="keywords" content="Amazon KDP UK, publish children's book UK, KDP self publishing, cockapoo children's book, Where is Maverick, KDP royalties, children's book Instagram, self publish UK 2026" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brown-deep: #3D1F0A;
+      --brown-mid: #6B3A1F;
+      --amber: #C9841A;
+      --amber-light: #F0A830;
+      --sage: #7A9E6E;
+      --cream: #FDF6EC;
+      --cream-dark: #F5EAD8;
+      --white: #FFFFFF;
+      --text: #3D1F0A;
+      --text-mid: #6B4C35;
+      --text-muted: #A08070;
+      --border: #E8D5BC;
+      --teal-dark: #3D1F0A;
+      --teal-mid: #6B3A1F;
+      --teal-bright: #C9841A;
+      --amber-dark: #A0620E;
+      --text-dark: #3D1F0A;
+      --text-body: #6B4C35;
+      --warm-grey: #F5EAD8;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text-body);line-height:1.8;}
+    .topbar{background: var(--brown-deep);padding:12px 32px;display:flex;align-items:center;justify-content:space-between;}
+    .topbar-brand{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;font-style:italic;color:var(--amber);text-decoration:none;letter-spacing:0.02em;}
+    .topbar-right{display:flex;align-items:center;gap:12px;}
+    .topbar-link{color:rgba(255,255,255,0.5);font-size:0.78rem;text-decoration:none;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;}
+    .topbar-link:hover{color:var(--amber);}
+    .topbar-cta{background:var(--amber);color:var(--brown-deep);font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;padding:7px 16px;border-radius:20px;text-decoration:none;}
+    .topbar-cta:hover{background:#f5d48a;}
+    .hero{background:linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%);padding:80px 32px 88px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(233,196,106,0.12) 0%,transparent 70%);border-radius:50%;}
+    .hero::after{content:'';position:absolute;bottom:-40px;left:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(42,157,143,0.15) 0%,transparent 70%);border-radius:50%;}
+    .hero-inner{position:relative;z-index:1;max-width:680px;margin:0 auto;text-align:center;animation:fadeUp 0.7s ease both;}
+    .hero-paw{font-size:2.2rem;margin-bottom:16px;display:block;}
+    .hero-label{display:inline-block;background:rgba(233,196,106,0.15);border:1px solid rgba(233,196,106,0.35);color:var(--amber);font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:22px;}
+    .hero h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(1.8rem,4.2vw,3rem);line-height:1.2;color:var(--white);margin-bottom:20px;}
+    .hero h1 em{font-style:italic;color:var(--amber);}
+    .hero-date{display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6);font-size:0.82rem;padding:6px 16px;border-radius:20px;margin-bottom:20px;letter-spacing:0.04em;}
+    .hero-intro{font-size:1.05rem;color:rgba(255,255,255,0.65);font-weight:300;max-width:500px;margin:0 auto;}
+    .milestone-strip{background:var(--amber);padding:26px 32px;}
+    .milestone-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));}
+    .milestone-item{text-align:center;padding:6px 16px;border-right:1px solid rgba(13,59,56,0.15);}
+    .milestone-item:last-child{border-right:none;}
+    .milestone-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--brown-deep);display:block;line-height:1;}
+    .milestone-label{font-size:0.72rem;font-weight:700;color:rgba(13,59,56,0.6);letter-spacing:0.08em;text-transform:uppercase;margin-top:3px;display:block;}
+    @media(max-width:600px){.milestone-item{border-right:none;border-bottom:1px solid rgba(13,59,56,0.12);padding:10px;}.milestone-item:last-child{border-bottom:none;}}
+    .layout{max-width:1040px;margin:0 auto;padding:60px 32px;display:grid;grid-template-columns:1fr 290px;gap:48px;align-items:start;}
+    @media(max-width:820px){.layout{grid-template-columns:1fr;}.sidebar{order:-1;}}
+    .article p{font-size:1.02rem;margin-bottom:20px;color:var(--text-body);}
+    .article h2{font-family:'Playfair Display',serif;font-weight:700;font-size:1.7rem;color:var(--text-dark);margin:48px 0 16px;line-height:1.2;}
+    .article h3{font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:var(--brown-mid);margin:28px 0 10px;text-transform:uppercase;letter-spacing:0.1em;}
+    .step-header{display:flex;align-items:center;gap:16px;margin:52px 0 20px;}
+    .step-num{flex-shrink:0;width:48px;height:48px;background:linear-gradient(135deg, var(--amber), var(--amber-light));color:var(--white);font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;display:flex;align-items:center;justify-content:center;border-radius:50%;box-shadow:0 4px 12px rgba(26,107,100,0.3);}
+    .step-title{font-family:'Playfair Display',serif;font-weight:700;font-size:1.6rem;color:var(--text-dark);line-height:1.2;}
+    .pullquote{border-left:4px solid var(--amber);padding:18px 26px;margin:28px 0;background:linear-gradient(135deg,rgba(233,196,106,0.07),rgba(42,157,143,0.04));border-radius:0 8px 8px 0;}
+    .pullquote p{font-family:'Playfair Display',serif!important;font-size:1.3rem!important;font-style:italic;color:var(--text-dark)!important;line-height:1.45;margin:0!important;}
+    .reason-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:20px 0 28px;}
+    .reason-card{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--amber);border-radius:6px;padding:16px 18px;}
+    .reason-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(13,59,56,0.08);}
+    .reason-card-title{font-family:'Nunito',sans-serif;font-weight:700;font-size:0.9rem;color:var(--brown-deep);margin-bottom:6px;}
+    .reason-card p{font-size:0.85rem!important;color:var(--text-muted)!important;margin:0!important;}
+    .check-list{list-style:none;margin:14px 0 24px;}
+    .check-list li{display:flex;gap:12px;padding:9px 0;border-bottom:1px solid var(--border);font-size:0.97rem;align-items:flex-start;}
+    .check-list li:last-child{border-bottom:none;}
+    .check-list li::before{content:'+';color:var(--amber);font-weight:700;font-size:1.1rem;flex-shrink:0;margin-top:1px;}
+    .royalty-box{background:linear-gradient(135deg,var(--brown-deep),var(--brown-mid));border-radius:10px;padding:28px 32px;margin:28px 0;position:relative;overflow:hidden;}
+    .royalty-box::before{content:'';position:absolute;top:-30px;right:-30px;width:140px;height:140px;background:radial-gradient(circle,rgba(233,196,106,0.15),transparent 70%);border-radius:50%;}
+    .royalty-label{font-family:'Nunito',sans-serif;font-weight:700;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);margin-bottom:16px;}
+    .royalty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;position:relative;z-index:1;}
+    @media(max-width:500px){.royalty-grid{grid-template-columns:1fr;}}
+    .royalty-item{text-align:center;}
+    .royalty-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--white);display:block;line-height:1;}
+    .royalty-num span{color:var(--amber);}
+    .royalty-sub{font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:4px;display:block;letter-spacing:0.04em;}
+    .final-box{background:var(--cream);border:2px solid var(--amber);border-radius:10px;padding:28px 32px;margin:36px 0;}
+    .final-box h3{font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;color:var(--text-dark);margin-bottom:16px!important;text-transform:none!important;letter-spacing:0!important;}
+    .final-box p{font-size:1rem!important;color:var(--text-body)!important;margin-bottom:12px!important;}
+    .final-box p:last-child{margin:0!important;}
+    .final-box strong{color:var(--brown-deep);}
+    .cta-box{background:linear-gradient(135deg, var(--brown-deep) 0%, var(--brown-mid) 100%);border-radius:10px;padding:32px;margin:36px 0;text-align:center;position:relative;overflow:hidden;}
+    .cta-box::before{content:'';position:absolute;bottom:-20px;right:-20px;width:160px;height:160px;background:radial-gradient(circle,rgba(233,196,106,0.1),transparent 70%);border-radius:50%;}
+    .cta-box h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:8px;}
+    .cta-box p{color:rgba(255,255,255,0.65)!important;font-size:0.9rem!important;margin-bottom:20px!important;max-width:360px;margin-left:auto!important;margin-right:auto!important;}
+    .cta-btn{display:inline-block;background:var(--amber);color:var(--brown-deep);font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.06em;text-transform:uppercase;padding:12px 28px;border-radius:20px;text-decoration:none;}
+    .cta-btn:hover{background:#f5d48a;}
+    .sidebar{position:sticky;top:20px;}
+    .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:20px;box-shadow:0 2px 12px rgba(13,59,56,0.05);}
+    .sidebar-head{background: var(--brown-deep);padding:14px 18px;}
+    .sidebar-head h4{font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);}
+    .sidebar-head.amber{background:var(--amber);}
+    .sidebar-head.amber h4{color:var(--brown-deep);}
+    .sidebar-body{padding:18px;}
+    .sidebar-body p{font-size:0.85rem;color:var(--text-muted);margin-bottom:10px;}
+    .toc-list{list-style:none;}
+    .toc-list li{padding:7px 0;border-bottom:1px solid var(--border);font-size:0.85rem;}
+    .toc-list li:last-child{border-bottom:none;}
+    .toc-list a{color:var(--text-body);text-decoration:none;font-weight:600;}
+    .toc-list a:hover{color:var(--amber);}
+    .sidebar-btn{display:block;text-align:center;background: var(--brown-mid);color:var(--white);font-family:'Nunito',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:0.06em;text-transform:uppercase;padding:11px;border-radius:20px;text-decoration:none;margin-top:14px;}
+    .sidebar-btn:hover{background: var(--brown-deep);}
+    .sidebar-btn.amber-btn{background:var(--amber);color:var(--brown-deep);}
+    .sidebar-btn.amber-btn:hover{background:var(--amber-dark);color:var(--white);}
+    .footer{background: var(--brown-deep);padding:48px 32px 28px;text-align:center;margin-top:64px;}
+    .footer-brand{font-family:'Playfair Display',serif;font-style:italic;font-size:1.4rem;color:var(--amber);margin-bottom:6px;}
+    .footer p{color:rgba(255,255,255,0.35);font-size:0.8rem;margin-top:8px;}
+    .footer-tag{color:rgba(255,255,255,0.5)!important;font-style:italic;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS5VR0KGVT"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SS5VR0KGVT');</script>
+</head>
+<body>
+
+    <nav class="topbar">
+    <a href="https://www.mavericksadventures.co.uk" class="topbar-brand">Maverick's Adventures</a>
+    <div class="topbar-right">
+      <a href="https://amzn.to/4628qPf" target="_blank" class="topbar-link">Get the Book</a>
+      <a href="https://www.mavericksadventures.co.uk" class="topbar-cta">Free Activity Pack</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="hero-paw">&#128062;</span>
+      <div class="hero-label">Published January 28th 2026</div>
+      <h1>How We Turned Our Cockapoo Into a <em>Children&rsquo;s Book Character</em> (And Published on Amazon KDP UK)</h1>
+      <div class="hero-date">Real numbers &mdash; 7 sales, &pound;18.82 royalties, Over 2,000 followers</div>
+      <p class="hero-intro">This was not just about selling books. It was about building a brand around a real dog with a real personality. Here is exactly how we did it.</p>
+    </div>
+  </header>
+
+  <div class="milestone-strip">
+    <div class="milestone-inner">
+      <div class="milestone-item"><span class="milestone-num">7</span><span class="milestone-label">Books Sold</span></div>
+      <div class="milestone-item"><span class="milestone-num">&pound;18.82</span><span class="milestone-label">Royalties Earned</span></div>
+      <div class="milestone-item"><span class="milestone-num">3</span><span class="milestone-label">Reviews</span></div>
+      <div class="milestone-item"><span class="milestone-num">2,000+</span><span class="milestone-label">Instagram Followers</span></div>
+      <div class="milestone-item"><span class="milestone-num">4</span><span class="milestone-label">Weeks Since Launch</span></div>
+    </div>
+  </div>
+
+  <div class="layout">
+    <article class="article">
+
+      <p>On January 28th 2026 we published our first children&rsquo;s book: <em>Where is Maverick?</em> Maverick is our cockapoo &mdash; full of energy, endlessly curious and genuinely one of the most characterful dogs we have ever known. The idea of turning him into a book character had been sitting at the dinner table for almost a year before we finally did something about it.</p>
+
+      <p>What followed was not just a book launch. It was the beginning of a brand. Here is the honest story of how we did it, what the real numbers look like, and what we would do differently knowing what we know now.</p>
+
+      <div class="pullquote">
+        <p>&ldquo;A book alone is a product. A character is an asset.&rdquo;</p>
+      </div>
+
+      <div class="step-header" id="kdp">
+        <div class="step-num">1</div>
+        <div class="step-title">Choosing Amazon KDP UK</div>
+      </div>
+
+      <p>We chose Amazon KDP because the barriers to entry are genuinely low and the distribution reach is genuinely high. No upfront printing costs, no minimum order quantities, no warehouse or fulfilment headaches. You upload your files, set your price and Amazon handles the rest &mdash; printing on demand when an order comes in and shipping directly to the customer.</p>
+
+      <div class="reason-grid">
+        <div class="reason-card">
+          <div class="reason-card-title">No Upfront Costs</div>
+          <p>Print on demand means no investment in stock. You only pay when a book sells.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-card-title">Global Distribution</div>
+          <p>Available on Amazon UK, US and international marketplaces from day one of publishing.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-card-title">Simple Royalties</div>
+          <p>60% royalty on the list price minus printing cost. Transparent, predictable and paid monthly.</p>
+        </div>
+      </div>
+
+      <h3>The Real Numbers After 7 Sales</h3>
+
+      <div class="royalty-box">
+        <div class="royalty-label">Where is Maverick &mdash; First Royalty Report</div>
+        <div class="royalty-grid">
+          <div class="royalty-item"><span class="royalty-num">7</span><span class="royalty-sub">Copies sold</span></div>
+          <div class="royalty-item"><span class="royalty-num"><span>&pound;</span>18.82</span><span class="royalty-sub">Royalties earned</span></div>
+          <div class="royalty-item"><span class="royalty-num">3</span><span class="royalty-sub">Reviews received</span></div>
+        </div>
+      </div>
+
+      <p>Seven sales and &pound;18.82 in royalties is not a life-changing number. But it is real validation. Real people found the book, bought it, read it with their children and took the time to leave a review. That is not nothing &mdash; that is proof of concept. The foundation everything else is built on.</p>
+
+      <p>The royalty per copy on a children&rsquo;s paperback through KDP is modest because of printing costs relative to the list price. Children&rsquo;s books are short and require full-colour printing throughout &mdash; which is more expensive per page than a text-heavy adult book. We priced strategically to remain competitive on Amazon while maintaining a positive royalty. It is a long game, not a quick win.</p>
+
+      <div class="step-header" id="brand">
+        <div class="step-num">2</div>
+        <div class="step-title">Building a Brand, Not Just a Book</div>
+      </div>
+
+      <p>This is the decision that changes everything. Anyone can publish a book on KDP. Far fewer people build a brand around the character in that book. The difference in long-term potential between those two approaches is enormous.</p>
+
+      <p>From the beginning, Maverick's Adventures was designed as a brand ecosystem rather than a single product. The book is the entry point. Everything else builds equity around Maverick as a character.</p>
+
+      <h3>What We Built Alongside the Book</h3>
+      <ul class="check-list">
+        <li>A dedicated Instagram account for Maverick &mdash; daily content featuring the real dog alongside the brand</li>
+        <li>A website at mavericksadventures.co.uk with a dedicated book page, shop and lead magnet</li>
+        <li>A free Explorer Pack &mdash; activity pack and activity sheets for sign-ups, building an email list from day one</li>
+        <li>An email automation sequence delivering the free pack and nurturing subscribers toward the book</li>
+      </ul>
+
+      <div class="pullquote">
+        <p>&ldquo;Children&rsquo;s books succeed on emotional connection. Maverick is not a fictional character &mdash; he is a real dog with a real Instagram account. That authenticity is the brand&rsquo;s biggest asset.&rdquo;</p>
+      </div>
+
+      <p>The free Explorer Pack deserves particular attention. By offering something valuable for free in exchange for an email address, we are building a direct relationship with our audience that does not depend on social media algorithms. Every subscriber is someone we can reach directly when Book 2 launches, when merchandise drops or when anything else happens in the Maverick universe.</p>
+
+      <div class="step-header" id="growth">
+        <div class="step-num">3</div>
+        <div class="step-title">Growing Organically to 2,000+ Followers in 4 Weeks</div>
+      </div>
+
+      <p>The Instagram growth has been the most surprising and encouraging part of the entire launch. Over 2,000 followers in four weeks without paid advertising and without any prior audience to seed from.</p>
+
+      <h3>What Actually Drove the Growth</h3>
+      <ul class="check-list">
+        <li><strong>Daily posting</strong> &mdash; consistency signals to the algorithm that your account is active and worth distributing</li>
+        <li><strong>Reels over static posts</strong> &mdash; short video content of Maverick reaches non-followers through the Explore feed and Reels tab</li>
+        <li><strong>Engaging the dog-loving community</strong> &mdash; cockapoo owners, dog lovers and parents of young children are a naturally warm audience for this content</li>
+        <li><strong>Authentic content</strong> &mdash; real photos and video of the actual dog rather than purely promotional content builds genuine connection</li>
+        <li><strong>Hashtag strategy</strong> &mdash; a mix of broad dog-related tags and specific children&rsquo;s book tags to reach both audiences simultaneously</li>
+      </ul>
+
+      <p>The key insight is that Maverick the real dog and Maverick the book character are the same entity. When people follow the Instagram account they are following a dog they find charming &mdash; and discovering the book is a natural part of that journey rather than an interruption of it.</p>
+
+      <h3>What Is Coming Next</h3>
+      <ul class="check-list">
+        <li>Book 2 in the Where is Maverick series &mdash; currently in development</li>
+        <li>A colouring and activity book to complement the series</li>
+        <li>Print-on-demand merchandise as the audience continues to grow</li>
+      </ul>
+
+      <div class="final-box" id="verdict">
+        <h3>Final Thoughts &mdash; Should You Publish a Children&rsquo;s Book on KDP UK?</h3>
+        <p>If you are considering publishing a children&rsquo;s book in the UK, the answer is yes &mdash; but the framing matters. KDP removes every barrier that used to make self-publishing daunting. The printing, the distribution, the global reach &mdash; all handled.</p>
+        <p>What KDP does not provide is an audience. That is entirely your job. And the fastest way to build that audience is not to market a book &mdash; it is to build a character people care about before the book even exists.</p>
+        <p><strong>A book alone is a product.</strong> A product can be sold. <strong>A character is an asset.</strong> An asset appreciates over time, generates multiple revenue streams and builds something with genuine long-term equity.</p>
+        <p>Maverick was always going to be a character first and a book second. That decision, more than any other, is what has made the first four weeks feel like the beginning of something rather than the end of a project.</p>
+      </div>
+
+      <div class="cta-box">
+        <h3>Grab Your Free Maverick Explorer Pack</h3>
+        <p>Free activity pack and activity sheets for your little ones &mdash; delivered instantly to your inbox when you sign up.</p>
+        <a href="https://www.mavericksadventures.co.uk" class="cta-btn">Get the Free Pack</a>
+      </div>
+
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-head"><h4>In This Article</h4></div>
+        <div class="sidebar-body">
+          <ul class="toc-list">
+            <li><a href="#kdp">Choosing Amazon KDP UK</a></li>
+            <li><a href="#brand">Building a Brand, Not a Book</a></li>
+            <li><a href="#growth">Growing to 2,000+ Followers</a></li>
+            <li><a href="#verdict">Final Thoughts</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-head amber"><h4>Get the Book</h4></div>
+        <div class="sidebar-body">
+          <p>Where is Maverick is available now on Amazon in paperback.</p>
+          <p>7 sales. 3 reviews. Real readers. Real children.</p>
+          <a href="https://amzn.to/4628qPf" class="sidebar-btn amber-btn">Buy on Amazon</a>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-head"><h4>Free Explorer Pack</h4></div>
+        <div class="sidebar-body">
+          <p>Free Maverick activity pack and activity sheets &mdash; perfect for little ones at home.</p>
+          <a href="https://www.mavericksadventures.co.uk" class="sidebar-btn">Get Free Pages</a>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-head"><h4>Follow Maverick</h4></div>
+        <div class="sidebar-body">
+          <p>See the real Maverick every day on Instagram &mdash; the walks, the mischief and everything in between.</p>
+          <a href="https://www.instagram.com/mavericksadventures" class="sidebar-btn">Follow on Instagram</a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+    <footer class="footer">
+    <div class="footer-brand">Maverick's Adventures</div>
+    <p class="footer-tag">Real dog. Real adventures. Real stories.</p>
+    <p>mavericksadventures.co.uk</p>
+    <p style="margin-top:6px;">&copy; 2026 Maverick's Adventures. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

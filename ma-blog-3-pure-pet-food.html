@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Maverick Eats &mdash; And Why We Made the Switch | Maverick's Adventures</title>
+  <meta name="description" content="We switched Maverick to Pure Pet Food three weeks ago. My wife was impressed before the first bag was finished. Here is what actually happened." />
+  <meta name="keywords" content="Pure Pet Food review, best food for cockapoo, fresh dog food UK, cockapoo diet, Pure Pet Food cockapoo, what to feed a cockapoo" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brown-deep: #3D1F0A;
+      --brown-mid: #6B3A1F;
+      --amber: #C9841A;
+      --amber-light: #F0A830;
+      --sage: #7A9E6E;
+      --cream: #FDF6EC;
+      --cream-dark: #F5EAD8;
+      --white: #FFFFFF;
+      --text: #3D1F0A;
+      --text-mid: #6B4C35;
+      --text-muted: #A08070;
+      --border: #E8D5BC;
+      --teal-dark: #3D1F0A;
+      --teal-mid: #6B3A1F;
+      --teal-bright: #C9841A;
+      --amber-dark: #A0620E;
+      --text-dark: #3D1F0A;
+      --text-body: #6B4C35;
+      --warm-grey: #F5EAD8;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text-body);line-height:1.85;}
+    .topbar{background: var(--brown-deep);padding:12px 32px;display:flex;align-items:center;justify-content:space-between;}
+    .topbar-brand{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:1.05rem;color:var(--amber);text-decoration:none;}
+    .topbar-right{display:flex;align-items:center;gap:14px;}
+    .topbar-link{color:rgba(255,255,255,0.45);font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;}
+    .topbar-link:hover{color:var(--amber);}
+    .topbar-cta{background:var(--amber);color:var(--brown-deep);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;padding:7px 16px;border-radius:20px;text-decoration:none;}
+    .hero{background:linear-gradient(150deg, var(--brown-deep) 0%, #5C2E10 100%);padding:80px 32px 88px;position:relative;overflow:hidden;text-align:center;}
+    .hero::before{content:'';position:absolute;top:-80px;right:-80px;width:360px;height:360px;background:radial-gradient(circle,rgba(233,196,106,0.1) 0%,transparent 70%);border-radius:50%;pointer-events:none;}
+    .hero-inner{position:relative;z-index:1;max-width:660px;margin:0 auto;animation:fadeUp 0.7s ease both;}
+    .hero-icon{font-size:2.5rem;display:block;margin-bottom:18px;}
+    .hero-label{display:inline-block;background:rgba(233,196,106,0.12);border:1px solid rgba(233,196,106,0.3);color:var(--amber);font-family:'Nunito',sans-serif;font-weight:700;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:20px;}
+    .hero h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.9rem);line-height:1.2;color:var(--white);margin-bottom:18px;}
+    .hero h1 em{font-style:italic;color:var(--amber);}
+    .hero-intro{font-size:1rem;color:rgba(255,255,255,0.65);font-weight:300;max-width:500px;margin:0 auto 28px;}
+    .hero-meta{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;}
+    .hero-meta span{font-size:0.78rem;color:rgba(255,255,255,0.35);}
+    .hero-meta span strong{color:rgba(255,255,255,0.6);}
+    .disclosure{background:var(--warm-grey);border-left:3px solid var(--amber);padding:12px 24px;max-width:1020px;margin:0 auto;}
+    .disclosure p{font-size:0.82rem;color:var(--text-muted);margin:0;}
+    .disclosure strong{color:var(--text-dark);}
+    .layout{max-width:1020px;margin:0 auto;padding:56px 32px;display:grid;grid-template-columns:1fr 280px;gap:48px;align-items:start;}
+    @media(max-width:800px){.layout{grid-template-columns:1fr;}.sidebar{order:-1;}}
+    .article p{font-size:1rem;margin-bottom:20px;color:var(--text-body);}
+    .article h2{font-family:'Playfair Display',serif;font-weight:700;font-size:1.6rem;color:var(--text-dark);margin:48px 0 14px;line-height:1.25;}
+    .pullquote{border-left:4px solid var(--amber);padding:18px 26px;margin:28px 0;background:linear-gradient(135deg,rgba(233,196,106,0.08),rgba(42,157,143,0.04));border-radius:0 8px 8px 0;}
+    .pullquote p{font-family:'Playfair Display',serif!important;font-size:1.2rem!important;font-style:italic;color:var(--text-dark)!important;margin:0!important;line-height:1.55;}
+    .reaction-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:22px 0 30px;}
+    .reaction-card{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--amber);border-radius:8px;padding:18px;}
+    .reaction-card.amber-top{border-top-color:var(--amber);}
+    .reaction-card-who{font-family:'Nunito',sans-serif;font-weight:800;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--brown-mid);margin-bottom:8px;}
+    .reaction-card.amber-top .reaction-card-who{color:var(--amber-dark);}
+    .reaction-card p{font-size:0.9rem!important;color:var(--text-body)!important;margin:0!important;line-height:1.6;}
+    .verdict-strip{background: var(--brown-deep);border-radius:8px;padding:22px 26px;margin:28px 0;}
+    .verdict-strip-label{font-family:'Nunito',sans-serif;font-weight:800;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);margin-bottom:12px;}
+    .verdict-row{display:flex;align-items:flex-start;gap:12px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .verdict-row:last-child{border-bottom:none;padding-bottom:0;}
+    .verdict-icon{flex-shrink:0;width:20px;height:20px;background:var(--amber);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+    .verdict-icon.neg{background:rgba(255,255,255,0.12);}
+    .verdict-icon span{font-size:0.72rem;color:var(--white);font-weight:800;}
+    .verdict-row p{color:rgba(255,255,255,0.8)!important;font-size:0.9rem!important;margin:0!important;line-height:1.5;}
+    .cta-box{background:linear-gradient(135deg,var(--amber),#d4a832);border-radius:10px;padding:28px 30px;margin:36px 0;text-align:center;}
+    .cta-box h3{font-family:'Playfair Display',serif;font-weight:700;font-size:1.35rem;color:var(--brown-deep);margin-bottom:6px;}
+    .cta-box p{color:rgba(13,59,56,0.7)!important;font-size:0.9rem!important;margin-bottom:18px!important;}
+    .cta-btn{display:inline-block;background: var(--brown-deep);color:var(--white);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.06em;text-transform:uppercase;padding:11px 26px;border-radius:20px;text-decoration:none;}
+    .cta-btn:hover{background: var(--brown-mid);}
+    .offer-pill{display:inline-block;background: var(--brown-deep);color:var(--amber);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.06em;padding:5px 14px;border-radius:20px;margin-bottom:14px;}
+    .sidebar{position:sticky;top:20px;}
+    .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:16px;box-shadow:0 2px 10px rgba(13,59,56,0.05);}
+    .sidebar-head{background: var(--brown-deep);padding:13px 17px;}
+    .sidebar-head h4{font-family:'Nunito',sans-serif;font-weight:800;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);}
+    .sidebar-head.amber-head{background:var(--amber);}
+    .sidebar-head.amber-head h4{color:var(--brown-deep);}
+    .sidebar-body{padding:16px;}
+    .sidebar-body p{font-size:0.83rem;color:var(--text-muted);margin-bottom:10px;}
+    .offer-badge{background: var(--brown-deep);color:var(--amber);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.78rem;text-align:center;padding:8px;margin-bottom:10px;border-radius:4px;}
+    .toc-list{list-style:none;}
+    .toc-list li{padding:6px 0;border-bottom:1px solid var(--border);font-size:0.83rem;}
+    .toc-list li:last-child{border-bottom:none;}
+    .toc-list a{color:var(--text-body);text-decoration:none;font-weight:600;}
+    .toc-list a:hover{color:var(--amber);}
+    .sidebar-btn{display:block;text-align:center;background: var(--brown-mid);color:var(--white);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;padding:10px;border-radius:20px;text-decoration:none;margin-top:10px;}
+    .sidebar-btn:hover{background: var(--brown-deep);}
+    .sidebar-btn.amber-btn{background:var(--amber);color:var(--brown-deep);}
+    .sidebar-btn.amber-btn:hover{background:var(--amber-dark);color:var(--white);}
+    .footer{background: var(--brown-deep);padding:44px 32px 28px;text-align:center;margin-top:64px;}
+    .footer-brand{font-family:'Playfair Display',serif;font-style:italic;font-size:1.3rem;color:var(--amber);margin-bottom:6px;}
+    .footer p{color:rgba(255,255,255,0.3);font-size:0.78rem;margin-top:8px;}
+    .footer-tag{color:rgba(255,255,255,0.5)!important;font-style:italic;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS5VR0KGVT"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SS5VR0KGVT');</script>
+</head>
+<body>
+
+    <nav class="topbar">
+    <a href="https://www.mavericksadventures.co.uk" class="topbar-brand">Maverick's Adventures</a>
+    <div class="topbar-right">
+      <a href="https://amzn.to/4628qPf" target="_blank" class="topbar-link">Get the Book</a>
+      <a href="https://www.mavericksadventures.co.uk" class="topbar-cta">Free Activity Pack</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="hero-icon">&#127859;</span>
+      <div class="hero-label">Maverick Recommends</div>
+      <h1>What Maverick Eats &mdash; and Why We <em>Made the Switch</em></h1>
+      <p class="hero-intro">We switched Maverick to Pure Pet Food three weeks ago. My wife was impressed before the first bag was finished. Here is what actually happened.</p>
+      <div class="hero-meta">
+        <span><strong>4 min read</strong></span>
+        <span><strong>Maverick's Adventures</strong></span>
+        <span><strong>2026</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="disclosure">
+    <p><strong>Affiliate disclosure:</strong> This post contains an affiliate link to Pure Pet Food. If you purchase through our link we may earn a small commission at no extra cost to you. We ordered and paid for this food ourselves. Everything here is Maverick&rsquo;s genuine experience.</p>
+  </div>
+
+  <div class="layout">
+    <article class="article">
+
+      <p>Maverick has been on dry kibble since we brought him home. Decent quality stuff &mdash; nothing wrong with it, just the default routine most dog owners end up in without really thinking about it too hard.</p>
+
+      <p>My wife had been reading about fresh dog food for a while. After enough conversations about it we eventually decided to just try it and see what happened. Three weeks later, here is the honest version of what we found.</p>
+
+      <div class="pullquote">
+        <p>&ldquo;My wife&rsquo;s verdict after the first week: &lsquo;I wish we had done this sooner.&rsquo;&rdquo;</p>
+      </div>
+
+      <h2 id="switching">Why We Decided to Switch</h2>
+
+      <p>No dramatic reason. Maverick was healthy and happy on his existing food. But when you start reading the ingredient list on a bag of dry kibble and comparing it to a short list of named meat and vegetables, the difference is hard to ignore.</p>
+
+      <p>Pure Pet Food kept coming up in the research. Not in a sponsored-content kind of way &mdash; in a real-dog-owners-recommending-it kind of way. We decided it was worth trying properly rather than just wondering about it.</p>
+
+      <h2 id="delivery">The First Delivery</h2>
+
+      <p>The sign-up process asks about your dog&rsquo;s breed, age, weight and activity level, then builds a personalised daily portion plan. For a cockapoo like Maverick the whole thing took about five minutes.</p>
+
+      <p>Delivery arrived quickly and was packaged properly &mdash; insulated, clearly labelled, pre-portioned daily pouches. My wife noticed the packaging before she had even opened anything. It felt considered rather than generic. The kind of detail that tells you the people behind the product have actually thought about what they are doing.</p>
+
+      <p>No measuring. No scooping. Open the pouch, serve it, done. For anyone who has spent time carefully weighing out kibble to the gram, this felt immediately more straightforward.</p>
+
+      <h2 id="ingredients">What Is Actually in It</h2>
+
+      <p>The ingredient list is genuinely short. Named meat &mdash; chicken in Maverick&rsquo;s case &mdash; listed first. Followed by vegetables and a small number of added vitamins and minerals. That is essentially it.</p>
+
+      <p>No fillers. No generic &ldquo;meat meal&rdquo; listed without a named source. Nothing that requires research to decode. My wife&rsquo;s background is in nutrition and she spent longer reading the ingredient panel than I expected her to. Her conclusion was direct: this is noticeably better than what we had been feeding him.</p>
+
+      <h2 id="maverick">The Part That Actually Matters</h2>
+
+      <p>We introduced the new food gradually over about a week, mixing it with his existing food and increasing the Pure Pet Food ratio each day. Worth doing this rather than switching cold &mdash; it avoids any stomach upset and lets your dog adjust properly.</p>
+
+      <p>By day three the bowl was being cleaned faster than it had ever been on kibble. By the end of the first week the transition was complete and he has not looked back since.</p>
+
+      <div class="reaction-grid">
+        <div class="reaction-card">
+          <div class="reaction-card-who">Maverick&rsquo;s Verdict</div>
+          <p>Bowl cleaned every single time. More excited at mealtimes than he has ever been on kibble. That says everything really.</p>
+        </div>
+        <div class="reaction-card">
+          <div class="reaction-card-who">His Coat</div>
+          <p>After about two weeks we noticed his coat looking shinier and softer. The timing is hard to ignore even if we cannot say for certain it is the food.</p>
+        </div>
+        <div class="reaction-card amber-top">
+          <div class="reaction-card-who">My Wife&rsquo;s Verdict</div>
+          <p>Impressed before the first bag was finished. She had made her mind up within the first week. Not someone who says that easily.</p>
+        </div>
+      </div>
+
+      <h2 id="verdict">The Honest Verdict</h2>
+
+      <div class="verdict-strip">
+        <div class="verdict-strip-label">What We Found</div>
+        <div class="verdict-row">
+          <div class="verdict-icon"><span>+</span></div>
+          <p>Genuinely clean ingredient list &mdash; short, named, real food first</p>
+        </div>
+        <div class="verdict-row">
+          <div class="verdict-icon"><span>+</span></div>
+          <p>Pre-portioned daily pouches &mdash; no measuring, no guesswork</p>
+        </div>
+        <div class="verdict-row">
+          <div class="verdict-icon"><span>+</span></div>
+          <p>Personalised plan based on your dog&rsquo;s specific breed, age and weight</p>
+        </div>
+        <div class="verdict-row">
+          <div class="verdict-icon"><span>+</span></div>
+          <p>Maverick noticeably more excited at mealtimes from day three</p>
+        </div>
+        <div class="verdict-row">
+          <div class="verdict-icon"><span>+</span></div>
+          <p>Coat improvement noticeable after approximately two weeks</p>
+        </div>
+        <div class="verdict-row">
+          <div class="verdict-icon neg"><span>&ndash;</span></div>
+          <p>It costs more than dry kibble. That is the only honest downside. Whether the difference is worth it is a personal decision &mdash; for us, watching Maverick&rsquo;s reaction every mealtime, the answer has been yes.</p>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <div class="offer-pill">50% off your first box</div>
+        <h3>Try Pure Pet Food for Your Dog</h3>
+        <p>Plus 20% off next deliveries through our link. Maverick approves &mdash; which is the only recommendation that counts in this house.</p>
+        <a href="https://www.purepetfood.com/s/RICK73288/w" class="cta-btn">Claim the Offer</a>
+      </div>
+
+      <p style="font-size:0.82rem;color:var(--text-muted);font-style:italic;">AD | Affiliate link &mdash; we earn a small commission at no extra cost to you. We ordered and paid for this food ourselves before any affiliate relationship existed.</p>
+
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-head"><h4>In This Post</h4></div>
+        <div class="sidebar-body">
+          <ul class="toc-list">
+            <li><a href="#switching">Why We Switched</a></li>
+            <li><a href="#delivery">The First Delivery</a></li>
+            <li><a href="#ingredients">What Is in It</a></li>
+            <li><a href="#maverick">Maverick&rsquo;s Reaction</a></li>
+            <li><a href="#verdict">The Honest Verdict</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-head amber-head"><h4>Pure Pet Food</h4></div>
+        <div class="sidebar-body">
+          <div class="offer-badge">50% off your first box</div>
+          <p>Fresh, personalised dog food. Plus 20% off next deliveries through our link.</p>
+          <a href="https://www.purepetfood.com/s/RICK73288/w" class="sidebar-btn amber-btn">Claim the Offer</a>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-head amber-head"><h4>Get the Book</h4></div>
+        <div class="sidebar-body">
+          <p>Where Is Maverick is available now on Amazon in paperback.</p>
+          <a href="https://amzn.to/4628qPf" class="sidebar-btn amber-btn">Buy on Amazon</a>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-head"><h4>Free Adventure Pack</h4></div>
+        <div class="sidebar-body">
+          <p>Free Maverick activity pack and activities for your little ones.</p>
+          <a href="https://www.mavericksadventures.co.uk" class="sidebar-btn">Get Free Pack</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+    <footer class="footer">
+    <div class="footer-brand">Maverick's Adventures</div>
+    <p class="footer-tag">Real dog. Real adventures. Real stories.</p>
+    <p>mavericksadventures.co.uk</p>
+    <p style="margin-top:6px;">&copy; 2026 Maverick's Adventures. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

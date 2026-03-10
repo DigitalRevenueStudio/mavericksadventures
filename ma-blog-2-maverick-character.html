@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Maverick Became a Book Character &mdash; The Real Story Behind Where Is Maverick | Maverick's Adventures</title>
+  <meta name="description" content="The real story behind Where Is Maverick &mdash; how our cockapoo inspired a children's book series, what makes him the perfect character, and how the idea went from dinner table conversation to published book." />
+  <meta name="keywords" content="Where is Maverick book, cockapoo children's book, Maverick's Adventures, children's book character, cockapoo story book, dog children's book UK" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brown-deep: #3D1F0A;
+      --brown-mid: #6B3A1F;
+      --amber: #C9841A;
+      --amber-light: #F0A830;
+      --sage: #7A9E6E;
+      --cream: #FDF6EC;
+      --cream-dark: #F5EAD8;
+      --white: #FFFFFF;
+      --text: #3D1F0A;
+      --text-mid: #6B4C35;
+      --text-muted: #A08070;
+      --border: #E8D5BC;
+      --teal-dark: #3D1F0A;
+      --teal-mid: #6B3A1F;
+      --teal-bright: #C9841A;
+      --amber-dark: #A0620E;
+      --text-dark: #3D1F0A;
+      --text-body: #6B4C35;
+      --warm-grey: #F5EAD8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Nunito', sans-serif; background: var(--cream); color: var(--text-body); line-height: 1.85; }
+
+    /* TOPBAR */
+    .topbar { background: var(--brown-deep); padding: 12px 32px; display: flex; align-items: center; justify-content: space-between; }
+    .topbar-brand { font-family: 'Playfair Display', serif; font-weight: 700; font-style: italic; font-size: 1.05rem; color: var(--amber); text-decoration: none; }
+    .topbar-right { display: flex; align-items: center; gap: 14px; }
+    .topbar-link { color: rgba(255,255,255,0.45); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; }
+    .topbar-link:hover { color: var(--amber); }
+    .topbar-cta { background: var(--amber); color: var(--brown-deep); font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 7px 16px; border-radius: 20px; text-decoration: none; }
+
+    /* HERO */
+    .hero { background: linear-gradient(150deg, var(--brown-deep) 0%, #5C2E10 100%); padding: 80px 32px 88px; position: relative; overflow: hidden; text-align: center; }
+    .hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 360px; height: 360px; background: radial-gradient(circle, rgba(233,196,106,0.1) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+    .hero::after { content: ''; position: absolute; bottom: -60px; left: -60px; width: 280px; height: 280px; background: radial-gradient(circle, rgba(42,157,143,0.12) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+    .hero-inner { position: relative; z-index: 1; max-width: 660px; margin: 0 auto; animation: fadeUp 0.7s ease both; }
+    .hero-paw { font-size: 2.5rem; display: block; margin-bottom: 18px; }
+    .hero-label { display: inline-block; background: rgba(233,196,106,0.12); border: 1px solid rgba(233,196,106,0.3); color: var(--amber); font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 5px 16px; border-radius: 20px; margin-bottom: 20px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: clamp(1.8rem, 4vw, 2.9rem); line-height: 1.2; color: var(--white); margin-bottom: 18px; }
+    .hero h1 em { font-style: italic; color: var(--amber); }
+    .hero-intro { font-size: 1rem; color: rgba(255,255,255,0.65); font-weight: 300; max-width: 500px; margin: 0 auto 28px; }
+    .hero-meta { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 0.78rem; color: rgba(255,255,255,0.35); letter-spacing: 0.04em; }
+    .hero-meta span strong { color: rgba(255,255,255,0.6); }
+
+    /* LAYOUT */
+    .layout { max-width: 1020px; margin: 0 auto; padding: 60px 32px; display: grid; grid-template-columns: 1fr 280px; gap: 48px; align-items: start; }
+    @media (max-width: 800px) { .layout { grid-template-columns: 1fr; } .sidebar { order: -1; } }
+
+    /* ARTICLE */
+    .article p { font-size: 1rem; margin-bottom: 20px; color: var(--text-body); }
+    .article h2 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.65rem; color: var(--text-dark); margin: 48px 0 16px; line-height: 1.25; }
+    .article h3 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.82rem; color: var(--brown-mid); margin: 24px 0 8px; text-transform: uppercase; letter-spacing: 0.1em; }
+
+    .pullquote { border-left: 4px solid var(--amber); padding: 18px 26px; margin: 28px 0; background: linear-gradient(135deg, rgba(233,196,106,0.08), rgba(42,157,143,0.04)); border-radius: 0 8px 8px 0; }
+    .pullquote p { font-family: 'Playfair Display', serif !important; font-size: 1.25rem !important; font-style: italic; color: var(--text-dark) !important; margin: 0 !important; line-height: 1.5; }
+
+    .trait-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 20px 0 28px; }
+    .trait-card { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--amber); border-radius: 6px; padding: 16px 18px; }
+    .trait-card-title { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.9rem; color: var(--brown-deep); margin-bottom: 6px; }
+    .trait-card p { font-size: 0.85rem !important; color: var(--text-muted) !important; margin: 0 !important; }
+
+    .story-step { display: flex; gap: 18px; margin-bottom: 24px; align-items: flex-start; }
+    .step-circle { flex-shrink: 0; width: 44px; height: 44px; background: linear-gradient(135deg, var(--amber), var(--amber-light)); color: var(--white); font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; box-shadow: 0 4px 12px rgba(26,107,100,0.25); }
+    .step-content strong { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.95rem; color: var(--text-dark); display: block; margin-bottom: 4px; }
+    .step-content p { font-size: 0.92rem !important; margin: 0 !important; color: var(--text-muted) !important; }
+
+    .warm-box { background: linear-gradient(135deg, var(--brown-deep), #5C2E10); border-radius: 10px; padding: 28px 32px; margin: 32px 0; }
+    .warm-box-label { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--amber); margin-bottom: 10px; }
+    .warm-box p { color: rgba(255,255,255,0.8) !important; font-size: 1rem !important; margin-bottom: 8px !important; }
+    .warm-box p:last-child { margin: 0 !important; }
+
+    .cta-box { background: linear-gradient(135deg, var(--amber), #d4a832); border-radius: 10px; padding: 30px 32px; margin: 36px 0; text-align: center; }
+    .cta-box h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; color: var(--brown-deep); margin-bottom: 8px; }
+    .cta-box p { color: rgba(13,59,56,0.7) !important; font-size: 0.9rem !important; margin-bottom: 18px !important; }
+    .cta-btn { display: inline-block; background: var(--brown-deep); color: var(--white); font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 11px 26px; border-radius: 20px; text-decoration: none; }
+    .cta-btn:hover { background: var(--brown-mid); }
+
+    /* SIDEBAR */
+    .sidebar { position: sticky; top: 20px; }
+    .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 18px; box-shadow: 0 2px 10px rgba(13,59,56,0.05); }
+    .sidebar-head { background: var(--brown-deep); padding: 13px 17px; }
+    .sidebar-head h4 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); }
+    .sidebar-head.amber-head { background: var(--amber); }
+    .sidebar-head.amber-head h4 { color: var(--brown-deep); }
+    .sidebar-body { padding: 16px; }
+    .sidebar-body p { font-size: 0.83rem; color: var(--text-muted); margin-bottom: 10px; }
+    .toc-list { list-style: none; }
+    .toc-list li { padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 0.83rem; }
+    .toc-list li:last-child { border-bottom: none; }
+    .toc-list a { color: var(--text-body); text-decoration: none; font-weight: 600; }
+    .toc-list a:hover { color: var(--amber); }
+    .sidebar-btn { display: block; text-align: center; background: var(--brown-mid); color: var(--white); font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 10px; border-radius: 20px; text-decoration: none; margin-top: 12px; }
+    .sidebar-btn:hover { background: var(--brown-deep); }
+    .sidebar-btn.amber-btn { background: var(--amber); color: var(--brown-deep); }
+    .sidebar-btn.amber-btn:hover { background: var(--amber-dark); color: var(--white); }
+
+    /* FOOTER */
+    .footer { background: var(--brown-deep); padding: 44px 32px 28px; text-align: center; margin-top: 64px; }
+    .footer-brand { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.3rem; color: var(--amber); margin-bottom: 6px; }
+    .footer p { color: rgba(255,255,255,0.3); font-size: 0.78rem; margin-top: 8px; }
+    .footer-tag { color: rgba(255,255,255,0.5) !important; font-style: italic; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS5VR0KGVT"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SS5VR0KGVT');</script>
+</head>
+<body>
+
+    <nav class="topbar">
+    <a href="https://www.mavericksadventures.co.uk" class="topbar-brand">Maverick's Adventures</a>
+    <div class="topbar-right">
+      <a href="https://amzn.to/4628qPf" target="_blank" class="topbar-link">Get the Book</a>
+      <a href="https://www.mavericksadventures.co.uk" class="topbar-cta">Free Activity Pack</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="hero-paw">&#128062;</span>
+      <div class="hero-label">The Story Behind the Story</div>
+      <h1>How Maverick Became a <em>Book Character</em></h1>
+      <p class="hero-intro">The real story behind Where Is Maverick &mdash; from a dinner table idea to a published children&rsquo;s book series.</p>
+      <div class="hero-meta">
+        <span><strong>6 min read</strong></span>
+        <span><strong>Maverick's Adventures</strong></span>
+        <span><strong>2026</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <article class="article">
+
+      <p>Every children&rsquo;s book character starts somewhere. Paddington started with a toy bear on a station platform. Spot the dog started with a father wanting to draw something simple for his toddler. Maverick started at our dinner table, with the same sentence repeated for about a year.</p>
+
+      <p><em>&ldquo;We should write a book about him.&rdquo;</em></p>
+
+      <p>Maverick is our cockapoo. He is energetic, endlessly curious, and has the kind of personality that fills a room &mdash; or in his case, a story. The idea of turning him into a children&rsquo;s book character had been sitting between us for a long time before we finally did something about it. Here is how that actually happened.</p>
+
+      <div class="pullquote">
+        <p>&ldquo;Maverick does not sit still for long. Which, it turns out, makes him a perfect children&rsquo;s book character.&rdquo;</p>
+      </div>
+
+      <h2 id="maverick">Who Is Maverick?</h2>
+
+      <p>Maverick is a cockapoo &mdash; a cocker spaniel and poodle cross &mdash; and if you know the breed, you already have a good sense of the energy level. He is curious about everything. He investigates corners. He disappears into gardens. He turns up somewhere unexpected about thirty seconds after you last saw him.</p>
+
+      <p>It is that last quality &mdash; the disappearing &mdash; that became the heart of the first book. Where Is Maverick? was not a title we invented. It is a sentence we say in real life, regularly, in a slightly exasperated but completely loving tone.</p>
+
+      <h3>What Makes Him a Character</h3>
+      <div class="trait-grid">
+        <div class="trait-card">
+          <div class="trait-card-title">Endlessly Curious</div>
+          <p>Every walk is an investigation. Every room is an adventure waiting to happen.</p>
+        </div>
+        <div class="trait-card">
+          <div class="trait-card-title">Always Disappearing</div>
+          <p>The original inspiration for the book. Where Is Maverick is a real question in our house.</p>
+        </div>
+        <div class="trait-card">
+          <div class="trait-card-title">Completely Loveable</div>
+          <p>Whatever mischief he is in, it is impossible to be cross at him for long. Children understand this perfectly.</p>
+        </div>
+        <div class="trait-card">
+          <div class="trait-card-title">Genuinely Real</div>
+          <p>He is not a fictional dog. He exists. Children who follow his Instagram see the real Maverick every day.</p>
+        </div>
+      </div>
+
+      <h2 id="idea">Where the Idea Came From</h2>
+
+      <p>The dinner table conversation went around in circles for a while. We talked about it. We said we should do it. We talked about it again. The barrier was not creativity &mdash; the character was already there, fully formed, living in our house. The barrier was the gap between &ldquo;we should&rdquo; and &ldquo;we are.&rdquo;</p>
+
+      <p>What eventually pushed us over the line was a simple question: what is the story? Not &ldquo;should we write a book about Maverick&rdquo; but &ldquo;what happens in it?&rdquo;</p>
+
+      <p>The answer came almost immediately. <em>He disappears, and someone has to find him.</em> Simple, relatable, and true to who he actually is. A story that every parent who has ever owned a dog &mdash; or lost a child in a supermarket for thirty terrifying seconds &mdash; would recognise immediately.</p>
+
+      <h2 id="process">How the Book Came Together</h2>
+
+      <div class="story-step">
+        <div class="step-circle">1</div>
+        <div class="step-content">
+          <strong>The Story</strong>
+          <p>We kept it simple and age-appropriate for 2 to 6 year olds. Short sentences, clear narrative, an ending that satisfies. Maverick goes missing. Maverick gets found. Everyone is happy.</p>
+        </div>
+      </div>
+      <div class="story-step">
+        <div class="step-circle">2</div>
+        <div class="step-content">
+          <strong>The Illustrations</strong>
+          <p>We used digital illustration tools to bring Maverick to life on the page &mdash; capturing his personality, his colouring and that distinctive cockapoo energy in a style young children respond to.</p>
+        </div>
+      </div>
+      <div class="story-step">
+        <div class="step-circle">3</div>
+        <div class="step-content">
+          <strong>Publishing on Amazon KDP</strong>
+          <p>We chose Amazon KDP for its straightforward process and global reach. No upfront printing costs, available to readers worldwide from day one.</p>
+        </div>
+      </div>
+      <div class="story-step">
+        <div class="step-circle">4</div>
+        <div class="step-content">
+          <strong>Building the World Around Him</strong>
+          <p>The book was never going to be the whole story. We wanted Maverick to have a life beyond the pages &mdash; which is why the Instagram, the website and the community all grew alongside it.</p>
+        </div>
+      </div>
+
+      <h2 id="why">Why a Real Dog Changes Everything</h2>
+
+      <p>There are thousands of children&rsquo;s books about dogs. What makes Maverick's Adventures different is that Maverick is real. He has a real Instagram account where children and parents follow his actual daily adventures. He has a real personality that shines through every post.</p>
+
+      <p>When a child reads Where Is Maverick and then sees him on their parent&rsquo;s phone &mdash; the same dog, same curls, same expression &mdash; the connection is immediate and genuine. The book stops being a story and starts being a window into someone&rsquo;s real life. That authenticity is something no fictional character can replicate.</p>
+
+      <div class="warm-box">
+        <div class="warm-box-label">From the Community</div>
+        <p>The response from the first readers has been everything we hoped for. Three reviews on Amazon in the first few weeks, all from real families who read it with their little ones.</p>
+        <p>That is what all of this is for. Not the numbers &mdash; the moment a child asks to read it again.</p>
+      </div>
+
+      <h2 id="next">What Comes Next for Maverick</h2>
+
+      <p>Where Is Maverick is the first book in the Maverick's Adventures series &mdash; and it was always designed to be the beginning, not the whole story. Book 2 is already in development, and we are working on a colouring and activity book alongside it.</p>
+
+      <p>The adventures are going to keep coming. Because Maverick, being Maverick, is never short of them.</p>
+
+      <div class="cta-box">
+        <h3>Follow Maverick&rsquo;s Adventures</h3>
+        <p>Sign up for free activity pack and be the first to hear about new books in the series.</p>
+        <a href="https://www.mavericksadventures.co.uk" class="cta-btn">Get Free Activity Pack</a>
+      </div>
+
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-head"><h4>In This Post</h4></div>
+        <div class="sidebar-body">
+          <ul class="toc-list">
+            <li><a href="#maverick">Who Is Maverick?</a></li>
+            <li><a href="#idea">Where the Idea Came From</a></li>
+            <li><a href="#process">How the Book Came Together</a></li>
+            <li><a href="#why">Why a Real Dog Changes Everything</a></li>
+            <li><a href="#next">What Comes Next</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-head amber-head"><h4>Get the Book</h4></div>
+        <div class="sidebar-body">
+          <p>Where Is Maverick is available now on Amazon in paperback.</p>
+          <a href="https://amzn.to/4628qPf" class="sidebar-btn amber-btn">Buy on Amazon</a>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-head"><h4>Free Activity Pack</h4></div>
+        <div class="sidebar-body">
+          <p>Free Maverick activity pack for your little ones &mdash; instant delivery to your inbox.</p>
+          <a href="https://www.mavericksadventures.co.uk" class="sidebar-btn">Get Free Pages</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+    <footer class="footer">
+    <div class="footer-brand">Maverick's Adventures</div>
+    <p class="footer-tag">Real dog. Real adventures. Real stories.</p>
+    <p>mavericksadventures.co.uk</p>
+    <p style="margin-top:6px;">&copy; 2026 Maverick's Adventures. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

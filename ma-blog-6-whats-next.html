@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What's Next for Maverick? — Maverick's Adventures Blog</title>
+<meta name="description" content="The website is live, the book is selling, and Maverick has more adventures to come. Here's what's next for Maverick's Adventures.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Nunito:wght@300;400;500;600;700;800&display=swap');
+  :root {
+      --brown-deep: #3D1F0A;
+      --brown-mid: #6B3A1F;
+      --amber: #C9841A;
+      --amber-light: #F0A830;
+      --sage: #7A9E6E;
+      --cream: #FDF6EC;
+      --cream-dark: #F5EAD8;
+      --white: #FFFFFF;
+      --text: #3D1F0A;
+      --text-mid: #6B4C35;
+      --text-muted: #A08070;
+      --border: #E8D5BC;
+      --teal-dark: #3D1F0A;
+      --teal-mid: #6B3A1F;
+      --teal-bright: #C9841A;
+      --amber-dark: #A0620E;
+      --text-dark: #3D1F0A;
+      --text-body: #6B4C35;
+      --warm-grey: #F5EAD8;
+    }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--brown);line-height:1.8;}
+  .post-wrap{max-width:760px;margin:0 auto;padding:60px 24px 80px;}
+
+  /* HEADER */
+  .post-header{margin-bottom:48px;}
+  .post-eyebrow{font-size:0.72rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;}
+  .post-title{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:var(--brown);line-height:1.1;margin-bottom:16px;}
+  .post-title em{font-style:italic;color:var(--amber);}
+  .post-meta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding:16px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:36px;}
+  .post-meta span{font-size:0.78rem;color:var(--text-muted);font-weight:600;}
+  .post-meta strong{color:var(--text-mid);}
+
+  /* BODY */
+  .post-body h2{font-family:'Playfair Display',serif;font-weight:800;font-size:1.5rem;color:var(--brown);margin:36px 0 14px;line-height:1.2;}
+  .post-body h2 em{font-style:italic;color:var(--amber);}
+  .post-body p{font-size:1rem;color:var(--text-mid);line-height:1.9;margin-bottom:18px;}
+  .post-body p:last-child{margin-bottom:0;}
+  .post-body strong{color:var(--brown);}
+
+  /* HIGHLIGHT BOX */
+  .highlight-box{background:var(--cream-dark);border-left:4px solid var(--amber);border-radius:0 12px 12px 0;padding:24px 28px;margin:32px 0;}
+  .highlight-box p{font-family:'Playfair Display',serif;font-style:italic;font-size:1.05rem;color:var(--brown);line-height:1.75;margin:0;}
+
+  /* TEASER CARDS */
+  .teaser-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0;}
+  .teaser-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;}
+  .teaser-icon{font-size:1.8rem;margin-bottom:10px;}
+  .teaser-pill{display:inline-block;background:rgba(201,132,26,0.12);color:var(--amber);font-size:0.65rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;border-radius:50px;margin-bottom:10px;}
+  .teaser-card h3{font-family:'Playfair Display',serif;font-weight:800;font-size:1rem;color:var(--brown);margin-bottom:8px;}
+  .teaser-card p{font-size:0.85rem;color:var(--text-muted);line-height:1.7;margin:0;}
+
+  /* DIVIDER */
+  .paw-divider{display:flex;align-items:center;gap:12px;margin:36px 0;}
+  .paw-divider::before,.paw-divider::after{content:'';flex:1;height:1px;background:var(--border);}
+
+  /* SIGNUP BOX */
+  .signup-box{background:var(--brown);border-radius:16px;padding:36px 40px;margin:40px 0;text-align:center;}
+  .signup-box h3{font-family:'Playfair Display',serif;font-weight:800;font-size:1.4rem;color:var(--white);margin-bottom:10px;}
+  .signup-box h3 em{font-style:italic;color:var(--amber-light);}
+  .signup-box p{font-size:0.88rem;color:rgba(255,255,255,0.5);margin-bottom:20px;line-height:1.7;}
+
+  /* AMAZON CTA */
+  .amazon-cta{background:var(--cream-dark);border:1px solid var(--border);border-radius:14px;padding:28px 32px;margin:40px 0;display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+  .amazon-cta-text .label{font-size:0.68rem;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;}
+  .amazon-cta-text .title{font-family:'Playfair Display',serif;font-weight:800;font-size:1.15rem;color:var(--brown);}
+  .btn-amber{display:inline-block;background:var(--amber);color:var(--white);font-family:'Nunito',sans-serif;font-weight:800;font-size:0.82rem;letter-spacing:0.06em;text-transform:uppercase;padding:12px 26px;border-radius:50px;text-decoration:none;white-space:nowrap;}
+
+  /* SIGNOFF */
+  .signoff{margin-top:48px;padding-top:28px;border-top:1px solid var(--border);}
+  .signoff p{font-size:0.97rem;color:var(--text-mid);line-height:1.8;margin-bottom:8px;}
+  .signoff .name{font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem;color:var(--brown);margin-top:12px;}
+
+  @media(max-width:600px){.teaser-grid{grid-template-columns:1fr;}.amazon-cta{flex-direction:column;align-items:flex-start;}.signup-box{padding:28px 24px;}}
+</style>
+<script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0];
+    a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('89edea74209101')
+</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS5VR0KGVT"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SS5VR0KGVT');</script>
+</head>
+<body>
+<div class="post-wrap">
+
+  <div class="post-header">
+    <div class="post-eyebrow">Maverick's Adventures Blog</div>
+    <h1 class="post-title">What's Next for <em>Maverick?</em></h1>
+    <div class="post-meta">
+      <span>📅 <strong>13th March 2026</strong></span>
+      <span>✍️ <strong>Digit</strong></span>
+      <span>🏷️ <strong>Behind the Scenes</strong></span>
+    </div>
+  </div>
+
+  <div class="post-body">
+
+    <p>When we published <em>Where Is Maverick?</em> a few months ago, we honestly had no idea what to expect. A children's book about a real cockapoo, self-published, built from scratch — it felt like a leap into the unknown.</p>
+
+    <p>But the response has been wonderful. Families have been buying it, reading it, and coming back to tell us their little ones ask for it every single night. That's everything we hoped for.</p>
+
+    <p>So — what happens next?</p>
+
+    <div class="highlight-box">
+      <p>"Maverick is just getting started. There are more adventures to come, and we want you to be part of every single one."</p>
+    </div>
+
+    <h2>The website is <em>live</em></h2>
+
+    <p>Big news first — <strong>mavericksadventures.co.uk is now live.</strong> After months of building in the background, the site is up, the books page is live, and you can now explore everything Maverick's Adventures has to offer in one place.</p>
+
+    <p>We've kept it warm and simple — just like the books. You'll find the full story behind Maverick, details on Book 1, and a free activity pack you can download right now if you sign up below.</p>
+
+    <h2>Book 2 is on its way</h2>
+
+    <p>We won't give too much away just yet, but Book 2 is already in the works. Maverick has more places to explore, more rooms to disappear into, and more adventures waiting just around the corner.</p>
+
+    <p>We've been asking our readers what they'd love to see next — a beach adventure, a farm adventure, or something else entirely. The response has been brilliant, and it's helping us shape exactly what Book 2 will look like.</p>
+
+    <p>If you want to be the first to know when it launches, sign up below. We'll send you early access, and you'll be among the first to read it.</p>
+
+    <div class="teaser-grid">
+      <div class="teaser-card">
+        <div class="teaser-icon">📚</div>
+        <div class="teaser-pill">Coming Soon</div>
+        <h3>Book 2 — Another Adventure</h3>
+        <p>Maverick is off on his next journey. Sign up to find out where he's heading first.</p>
+      </div>
+      <div class="teaser-card">
+        <div class="teaser-icon">🎨</div>
+        <div class="teaser-pill">Free Now</div>
+        <h3>Maverick Activity Pack</h3>
+        <p>Free printable activities to keep little ones busy. Sign up and download instantly.</p>
+      </div>
+    </div>
+
+    <h2>A free activity pack — right now</h2>
+
+    <p>While you wait for Book 2, we've put together a free Maverick Activity Pack — a set of printable activities perfect for little ones who love the books. Colouring pages, puzzles, and more, all featuring Maverick.</p>
+
+    <p>It's completely free. Just sign up below and it's yours instantly.</p>
+
+    <div class="paw-divider"><span><svg width="22" height="22" viewBox="0 0 100 100" fill="#C9841A" xmlns="http://www.w3.org/2000/svg"><path d="M50 45 C32 45 20 56 20 68 C20 80 32 88 50 88 C68 88 80 80 80 68 C80 56 68 45 50 45Z"/><ellipse cx="26" cy="35" rx="10" ry="13" transform="rotate(-15 26 35)"/><ellipse cx="74" cy="35" rx="10" ry="13" transform="rotate(15 74 35)"/><ellipse cx="40" cy="22" rx="9" ry="12" transform="rotate(-5 40 22)"/><ellipse cx="60" cy="22" rx="9" ry="12" transform="rotate(5 60 22)"/></svg></span></div>
+
+    <div class="signup-box">
+      <h3>Get the free activity pack +<br><em>Book 2 early access</em></h3>
+      <p>One sign-up gets you both. Join the Maverick's Adventures family today.</p>
+      <div style="text-align:left;max-width:420px;margin:0 auto;" class="sender-form-field" data-sender-form-id="bW69jg"></div>
+    </div>
+
+    <h2>Thank you</h2>
+
+    <p>To everyone who has bought the book, left a review, or sent us a message to say their child loves Maverick — thank you. You're the reason we keep going.</p>
+
+    <p>This is just the beginning. Maverick has a lot more adventures in him, and we can't wait to share them with you.</p>
+
+    <div class="amazon-cta">
+      <div class="amazon-cta-text">
+        <div class="label">Haven't read it yet?</div>
+        <div class="title">Where Is Maverick? — available now on Amazon</div>
+      </div>
+      <a href="https://amzn.to/4628qPf" target="_blank" class="btn-amber">📦 Order on Amazon →</a>
+    </div>
+
+    <div class="signoff">
+      <p>Until next time,</p>
+      <div class="name">Digit — The Maverick's Adventures Team 🐾</div>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
