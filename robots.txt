@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /ma-download.html
+Disallow: /ma-affiliate-thanks.html
+
+Sitemap: https://www.mavericksadventures.co.uk/sitemap.xml
