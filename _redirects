@@ -1,3 +1,6 @@
 https://mavericksadventures.co.uk/* https://www.mavericksadventures.co.uk/:splat 301
 /index.html / 301
 https://www.mavericksadventures.co.uk/index.html https://www.mavericksadventures.co.uk/ 301
+/Technology.html /index.html 301
+/Offering-Services.html /index.html 301
+/Book1-Where-is-Maverick.html /ma-book-1.html 301
