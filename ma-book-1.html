@@ -90,6 +90,7 @@
     .reviews-title{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--white);margin-bottom:16px;}
     .reviews-paw{display:flex;align-items:center;gap:12px;margin-bottom:40px;}
     .reviews-paw::before,.reviews-paw::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.1);}
+    .reviews-grid.four{grid-template-columns:repeat(2,1fr);}
     .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:36px;}
     .review-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px 24px;}
     .review-stars{color:var(--amber-light);font-size:0.9rem;letter-spacing:2px;margin-bottom:14px;}
@@ -128,7 +129,7 @@
       .book-hero-cover{max-width:320px;margin:0 auto;}
       .about-grid{grid-template-columns:1fr;}
       .details-inner{grid-template-columns:repeat(2,1fr);}
-      .reviews-grid{grid-template-columns:1fr;}
+      .reviews-grid{grid-template-columns:1fr;} .reviews-grid.four{grid-template-columns:1fr;}
       .maverick-inner{grid-template-columns:1fr;}
       .newsletter-box{grid-template-columns:1fr;padding:40px 32px;}
       
@@ -225,8 +226,7 @@
         <div class="eyebrow">Maverick's Adventures — Book One</div>
         <h1><em>Where Is Maverick?</em></h1>
         <div class="by-line">By Rick Shirley</div>
-        <div class="stars">★★★★★</div>
-        <div class="review-count">5 stars · 3 reviews on Amazon</div>
+        <div class="review-count" style="margin-top:4px;">Read the reviews and a free sample on the Amazon UK page</div>
         <p class="hero-desc">A fun rhyming hide-and-seek story following Maverick the cockapoo through a colourful adventure. Perfect for bedtime, storytime, and every read-aloud in between.</p>
         <div class="book-meta-row">
           <div class="meta-item"><span class="meta-label">Format</span><span class="meta-val">Paperback & Kindle</span></div>
@@ -235,7 +235,7 @@
           <div class="meta-item"><span class="meta-label">Ages</span><span class="meta-val">2–6 Years</span></div>
         </div>
         <div class="hero-actions">
-          <a href="https://amzn.to/4628qPf" target="_blank" class="btn-amber">📦 Order on Amazon</a>
+          <a href="https://amzn.to/4628qPf" target="_blank" rel="nofollow sponsored noopener" class="btn-amber">📦 View the paperback on Amazon</a>
           <a href="/ma-books" class="btn-outline">All Books →</a>
         </div>
       </div>
@@ -261,9 +261,9 @@
         <div class="detail-val">Amazon KDP UK</div>
       </div>
       <div class="detail-box">
-        <div class="detail-icon">⭐</div>
-        <div class="detail-label">Rating</div>
-        <div class="detail-val">5 Stars</div>
+        <div class="detail-icon">👀</div>
+        <div class="detail-label">Preview</div>
+        <div class="detail-val">Free sample on Amazon</div>
       </div>
     </div>
   </div>
@@ -309,24 +309,30 @@
       <div class="reviews-eyebrow">What Readers Say</div>
       <div class="reviews-title">Loved by families</div>
       <div class="reviews-paw"><span><svg width="24" height="24" viewBox="0 0 100 100" fill="#C9841A" xmlns="http://www.w3.org/2000/svg"><path d="M50 45 C32 45 20 56 20 68 C20 80 32 88 50 88 C68 88 80 80 80 68 C80 56 68 45 50 45Z"/><ellipse cx="26" cy="35" rx="10" ry="13" transform="rotate(-15 26 35)"/><ellipse cx="74" cy="35" rx="10" ry="13" transform="rotate(15 74 35)"/><ellipse cx="40" cy="22" rx="9" ry="12" transform="rotate(-5 40 22)"/><ellipse cx="60" cy="22" rx="9" ry="12" transform="rotate(5 60 22)"/></svg></span></div>
-      <div class="reviews-grid">
+      <div class="reviews-grid four">
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
-          <div class="review-text">"My two-year-old absolutely loves this book. We read it every single night — the rhymes are so fun to read aloud and she always wants to find Maverick herself."</div>
-          <div class="review-author">Amazon Reviewer</div>
-          <div class="review-source">Verified Purchase</div>
+          <div class="review-text">"Great book, my daughter loves the story and illustrations. Can't wait for the next one."</div>
+          <div class="review-author">Shaun M.</div>
+          <div class="review-source">Amazon UK review, Verified Purchase, 26 March 2026</div>
         </div>
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
-          <div class="review-text">"A really lovely little book. The illustrations are gorgeous and the hide-and-seek element keeps my son completely engaged. Brilliant for bedtime."</div>
-          <div class="review-author">Amazon Reviewer</div>
-          <div class="review-source">Verified Purchase</div>
+          <div class="review-text">"Amazing book, I work in a nursery and they love it"</div>
+          <div class="review-author">Hermionie</div>
+          <div class="review-source">Amazon UK review, 13 June 2026</div>
         </div>
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
-          <div class="review-text">"We bought this for our granddaughter who loves dogs. She was immediately smitten with Maverick. A wonderful, warm book that we'd recommend to any family."</div>
-          <div class="review-author">Amazon Reviewer</div>
-          <div class="review-source">Verified Purchase</div>
+          <div class="review-text">"My daughter really enjoyed hearing of all the adventures Maverick went on! We want to read more about Maverick, that cheeky little dog"</div>
+          <div class="review-author">Lewis S.</div>
+          <div class="review-source">Amazon UK review, 9 April 2026</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">"excellent children's story, cant wait for the next book."</div>
+          <div class="review-author">Wyatt</div>
+          <div class="review-source">Amazon UK review, 10 February 2026</div>
         </div>
       </div>
       <div class="reviews-cta">
