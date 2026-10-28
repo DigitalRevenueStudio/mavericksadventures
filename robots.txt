@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /ma-download.html
 
 Sitemap: https://www.mavericksadventures.co.uk/sitemap.xml
